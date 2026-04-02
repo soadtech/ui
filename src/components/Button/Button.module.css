@@ -1,0 +1,113 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--st-space-2);
+  border: 1px solid transparent;
+  border-radius: var(--st-radius-md);
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-medium);
+  line-height: var(--st-line-height-tight);
+  cursor: pointer;
+  transition: background-color var(--st-transition-fast),
+    border-color var(--st-transition-fast),
+    color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+.root:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Variants ─── */
+
+.primary {
+  background-color: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
+}
+
+.primary:hover {
+  background-color: var(--st-color-primary-hover);
+}
+
+.primary:active {
+  background-color: var(--st-color-primary-active);
+}
+
+.secondary {
+  background-color: var(--st-color-secondary);
+  color: var(--st-color-secondary-foreground);
+}
+
+.secondary:hover {
+  background-color: var(--st-color-secondary-hover);
+}
+
+.secondary:active {
+  background-color: var(--st-color-secondary-active);
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--st-color-foreground);
+  border-color: var(--st-color-border-strong);
+}
+
+.outline:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.outline:active {
+  background-color: var(--st-color-neutral-200);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--st-color-foreground);
+}
+
+.ghost:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.ghost:active {
+  background-color: var(--st-color-neutral-200);
+}
+
+.destructive {
+  background-color: var(--st-color-error);
+  color: var(--st-color-error-foreground);
+}
+
+.destructive:hover {
+  background-color: var(--st-color-error-hover);
+}
+
+/* ─── Sizes ─── */
+
+.sm {
+  height: 2rem;
+  padding: var(--st-space-1) var(--st-space-3);
+  font-size: var(--st-font-size-sm);
+}
+
+.md {
+  height: 2.5rem;
+  padding: var(--st-space-2) var(--st-space-4);
+  font-size: var(--st-font-size-sm);
+}
+
+.lg {
+  height: 3rem;
+  padding: var(--st-space-2) var(--st-space-6);
+  font-size: var(--st-font-size-md);
+}

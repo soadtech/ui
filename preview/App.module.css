@@ -1,0 +1,20 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--st-space-8) var(--st-space-4);
+}
+
+.header {
+  margin-bottom: var(--st-space-8);
+}
+
+.title {
+  font-size: var(--st-font-size-3xl);
+  font-weight: var(--st-font-weight-bold);
+  margin-bottom: var(--st-space-2);
+}
+
+.subtitle {
+  color: var(--st-color-muted);
+  font-size: var(--st-font-size-lg);
+}
