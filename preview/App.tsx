@@ -2,6 +2,7 @@ import styles from './App.module.css';
 import { ButtonSection } from './sections/ButtonSection';
 import { AccordionSection } from './sections/AccordionSection';
 import { ActionBarSection } from './sections/ActionBarSection';
+import { AlertSection } from './sections/AlertSection';
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
       <ButtonSection />
       <AccordionSection />
       <ActionBarSection />
+      <AlertSection />
     </div>
   );
 }

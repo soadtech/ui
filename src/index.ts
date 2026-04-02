@@ -15,3 +15,11 @@ export type {
   ActionBarAlign,
   ActionBarLinkProps,
 } from './components/ActionBar';
+
+export { Alert } from './components/Alert';
+export type {
+  AlertProps,
+  AlertStatus,
+  AlertVariant,
+  AlertLayout,
+} from './components/Alert';
