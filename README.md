@@ -51,6 +51,46 @@ soadtech-ui/
 └── tsconfig.preview.json             # Preview app
 ```
 
+## How to Add Components from Screenshots
+
+The user provides design screenshots (typically from Figma or similar). Each screenshot shows:
+
+- **Left column**: Individual item states (Default, Hover, Expanded, Disabled, etc.) with labels
+- **Right column**: The composed/grouped component showing multiple items together
+- **Variant labels**: Different visual or behavioral variants of the component
+
+### Interpretation rules
+
+1. **Read the screenshot structure**: The left side shows isolated states of a single item, the right side shows how items compose into a group. Sometimes there's only one view.
+2. **Identify variants/types**: Each labeled row (e.g. "Button", "Button Link", "Link") is either a variant prop or a sub-component.
+3. **Identify states**: Default, Hover, Expanded, Disabled, Active, etc. Map these to CSS pseudo-classes (`:hover`, `:disabled`, `:focus-visible`) or class toggles.
+4. **Dashed green borders** in screenshots are design framing — not part of the actual component styling.
+5. **"Replace me"** pink placeholders represent slots for custom content (`children` prop or named slot props).
+6. **Diamond icons** are decorative placeholders — implement as optional `icon` prop with `ReactNode` type.
+
+### Implementation checklist (for each new component)
+
+1. Create `src/components/ComponentName/` directory
+2. **`.types.ts`** — Props extending native HTML attributes, variant/size union types
+3. **`.tsx`** — `forwardRef`, `displayName`, `cn()` for class merging, `className` + `...rest` spread
+4. **`.module.css`** — `.root` base class, variant/size classes matching TypeScript values, all values via `--st-*` tokens, `:focus-visible` keyboard a11y
+5. **`index.ts`** — Re-export component + types
+6. If the component has parent-child coordination (like Accordion), use React Context in a `ComponentContext.ts` file
+7. Inline small SVG icons directly in the component file (chevrons, arrows, plus/minus, external icon, etc.) — no icon dependency
+8. Register exports in `src/index.ts`
+9. Create `preview/sections/ComponentNameSection.tsx` showcasing all variants, sizes, and states
+10. Add section to `preview/App.tsx`
+11. Run `pnpm typecheck && pnpm build` to verify
+
+### CSS conventions
+
+- All values reference `--st-*` tokens (never hardcoded colors, spacing, etc.)
+- Transitions use `var(--st-transition-fast)` / `base` / `slow`
+- Interactive elements get `:focus-visible` outline with `var(--st-color-primary)`
+- Disabled state: `opacity: 0.5; pointer-events: none` (unless the design shows something specific)
+- Animations for expand/collapse: CSS `grid-template-rows: 0fr → 1fr` transition
+- Class names match TypeScript variant values (e.g. variant `'primary'` → `.primary` in CSS)
+
 ## Component Conventions
 
 Every component follows this exact pattern:
@@ -171,27 +211,9 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
 
 ## Existing Components
 
-- **Button** — `src/components/Button/`
-  - Variants: `primary`, `secondary`, `outline`, `ghost`, `destructive`
-  - Sizes: `sm`, `md`, `lg`
-  - States: default, hover, active, focus-visible, disabled
-
-- **Accordion** — `src/components/Accordion/`
-  - Exports: `Accordion` (container), `AccordionItem` (expandable item)
-  - Accordion `type`: `single` (one open at a time), `multiple` (many open)
-  - Accordion `variant`: `collapsible` (chevron), `accordion` (plus/minus), `showmore` (triangle arrow)
-  - AccordionItem props: `value`, `title`, `description?`, `icon?`, `disabled?`
-  - Supports controlled (`value`/`onValueChange`) and uncontrolled (`defaultValue`) modes
-  - Uses React Context (`AccordionContext`) for parent-child communication
-  - Panel animation via CSS `grid-template-rows` transition
-  - States: default, hover, expanded, disabled (accordion variant has dark disabled bg)
-
-- **ActionBar** — `src/components/ActionBar/`
-  - Exports: `ActionBar` (horizontal flex container), `ActionBarLink` (text link item)
-  - ActionBar `align`: `start` (default), `center`, `end`
-  - ActionBar uses `role="toolbar"` for accessibility
-  - ActionBarLink `external?`: adds external link icon + `target="_blank"`
-  - Use with existing `Button` component or any custom children as items
+- **Button** — Variants: `primary`, `secondary`, `outline`, `ghost`, `destructive`. Sizes: `sm`, `md`, `lg`.
+- **Accordion** — Container (`Accordion`) + items (`AccordionItem`). Type: `single`/`multiple`. Variant: `collapsible`/`accordion`/`showmore`. Uses React Context.
+- **ActionBar** — Horizontal flex container (`ActionBar`) + text link (`ActionBarLink` with optional `external` icon). Compose with existing components as children.
 
 ## Build Output
 
