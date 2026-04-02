@@ -176,6 +176,16 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
   - Sizes: `sm`, `md`, `lg`
   - States: default, hover, active, focus-visible, disabled
 
+- **Accordion** — `src/components/Accordion/`
+  - Exports: `Accordion` (container), `AccordionItem` (expandable item)
+  - Accordion `type`: `single` (one open at a time), `multiple` (many open)
+  - Accordion `variant`: `collapsible` (chevron), `accordion` (plus/minus), `showmore` (triangle arrow)
+  - AccordionItem props: `value`, `title`, `description?`, `icon?`, `disabled?`
+  - Supports controlled (`value`/`onValueChange`) and uncontrolled (`defaultValue`) modes
+  - Uses React Context (`AccordionContext`) for parent-child communication
+  - Panel animation via CSS `grid-template-rows` transition
+  - States: default, hover, expanded, disabled (accordion variant has dark disabled bg)
+
 ## Build Output
 
 `dist/` contains:

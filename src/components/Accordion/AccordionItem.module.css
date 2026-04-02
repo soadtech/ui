@@ -1,0 +1,124 @@
+.item {
+  border-bottom: 1px solid var(--st-color-border);
+}
+
+/* ─── Trigger ─── */
+
+.trigger {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--st-space-3) var(--st-space-4);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  gap: var(--st-space-3);
+  text-align: left;
+  color: var(--st-color-foreground);
+  font-family: var(--st-font-family);
+  transition: background-color var(--st-transition-fast);
+}
+
+.trigger:hover:not(:disabled) {
+  background-color: var(--st-color-neutral-100);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: -2px;
+}
+
+.trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Accordion variant disabled: dark filled background */
+.trigger.accordion:disabled {
+  background-color: var(--st-color-neutral-800);
+  color: var(--st-color-neutral-50);
+  opacity: 1;
+}
+
+/* ─── Icon ─── */
+
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--st-color-muted);
+}
+
+.trigger.accordion:disabled .icon {
+  color: var(--st-color-neutral-300);
+}
+
+/* ─── Content ─── */
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+
+.title {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+}
+
+.description {
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-muted);
+  line-height: var(--st-line-height-normal);
+}
+
+.trigger.accordion:disabled .description {
+  color: var(--st-color-neutral-400);
+}
+
+/* ─── Indicator ─── */
+
+.indicator {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--st-transition-base);
+}
+
+.indicatorOpen {
+  transform: rotate(180deg);
+}
+
+/* ─── Panel ─── */
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--st-transition-slow);
+}
+
+.panelOpen {
+  grid-template-rows: 1fr;
+}
+
+.panelContent {
+  overflow: hidden;
+}
+
+.panelInner {
+  padding: var(--st-space-1) var(--st-space-4) var(--st-space-4)
+    var(--st-space-12);
+  font-size: var(--st-font-size-sm);
+  color: var(--st-color-muted);
+  line-height: var(--st-line-height-relaxed);
+}
+
+/* Showmore variant: less left padding since there's no icon column */
+.showmore ~ .panel .panelInner {
+  padding-left: var(--st-space-8);
+}

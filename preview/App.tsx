@@ -1,5 +1,6 @@
 import styles from './App.module.css';
 import { ButtonSection } from './sections/ButtonSection';
+import { AccordionSection } from './sections/AccordionSection';
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
         <p className={styles.subtitle}>Component Library Preview</p>
       </header>
       <ButtonSection />
+      <AccordionSection />
     </div>
   );
 }
