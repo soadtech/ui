@@ -186,6 +186,13 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
   - Panel animation via CSS `grid-template-rows` transition
   - States: default, hover, expanded, disabled (accordion variant has dark disabled bg)
 
+- **ActionBar** — `src/components/ActionBar/`
+  - Exports: `ActionBar` (horizontal flex container), `ActionBarLink` (text link item)
+  - ActionBar `align`: `start` (default), `center`, `end`
+  - ActionBar uses `role="toolbar"` for accessibility
+  - ActionBarLink `external?`: adds external link icon + `target="_blank"`
+  - Use with existing `Button` component or any custom children as items
+
 ## Build Output
 
 `dist/` contains:

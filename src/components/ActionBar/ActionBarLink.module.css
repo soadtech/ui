@@ -1,0 +1,31 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  color: var(--st-color-primary);
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  text-decoration: none;
+  cursor: pointer;
+  padding: var(--st-space-1) var(--st-space-2);
+  border-radius: var(--st-radius-sm);
+  transition: color var(--st-transition-fast),
+    background-color var(--st-transition-fast);
+}
+
+.root:hover {
+  color: var(--st-color-primary-hover);
+  text-decoration: underline;
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+.externalIcon {
+  display: inline-flex;
+  align-items: center;
+}

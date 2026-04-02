@@ -8,3 +8,10 @@ export type {
   AccordionVariant,
   AccordionItemProps,
 } from './components/Accordion';
+
+export { ActionBar, ActionBarLink } from './components/ActionBar';
+export type {
+  ActionBarProps,
+  ActionBarAlign,
+  ActionBarLinkProps,
+} from './components/ActionBar';
