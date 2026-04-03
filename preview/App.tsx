@@ -32,6 +32,7 @@ import { RatingSection } from './sections/RatingSection';
 import { RangeSliderSection } from './sections/RangeSliderSection';
 import { SelectDropdownSection } from './sections/SelectDropdownSection';
 import { SegmentedControlSection } from './sections/SegmentedControlSection';
+import { SidebarSection } from './sections/SidebarSection';
 
 export function App() {
   return (
@@ -73,6 +74,7 @@ export function App() {
       <RangeSliderSection />
       <SelectDropdownSection />
       <SegmentedControlSection />
+      <SidebarSection />
     </div>
   );
 }

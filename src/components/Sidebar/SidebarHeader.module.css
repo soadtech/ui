@@ -1,0 +1,5 @@
+.header {
+  flex-shrink: 0;
+  padding: var(--st-space-4);
+  border-bottom: 1px solid var(--st-color-border);
+}

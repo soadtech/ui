@@ -1,0 +1,12 @@
+.group {
+  padding: var(--st-space-2) 0;
+}
+
+.label {
+  padding: var(--st-space-2) var(--st-space-4);
+  font-size: var(--st-font-size-xs);
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

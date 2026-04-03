@@ -341,3 +341,22 @@ export type {
   SegmentedControlVariant,
   SegmentedControlItemProps,
 } from './components/SegmentedControl';
+
+export {
+  Sidebar,
+  SidebarHeader,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarNavItem,
+  SidebarDivider,
+} from './components/Sidebar';
+export type {
+  SidebarProps,
+  SidebarHeaderProps,
+  SidebarContentProps,
+  SidebarFooterProps,
+  SidebarGroupProps,
+  SidebarNavItemProps,
+  SidebarDividerProps,
+} from './components/Sidebar';
