@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--st-font-family);
+}
+
+.label {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  color: var(--st-color-muted);
+  margin-bottom: var(--st-space-1);
+}
+
+.valueRow {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+}
+
+.value {
+  font-weight: var(--st-font-weight-bold);
+  color: var(--st-color-foreground);
+  line-height: var(--st-line-height-tight);
+}
+
+.trend {
+  display: inline-flex;
+}
+
+.description {
+  font-size: var(--st-font-size-sm);
+  color: var(--st-color-muted);
+  margin-top: var(--st-space-1);
+}
+
+/* ─── Sizes ─── */
+
+.sm .value {
+  font-size: var(--st-font-size-xl);
+}
+
+.md .value {
+  font-size: var(--st-font-size-3xl);
+}
+
+.lg .value {
+  font-size: var(--st-font-size-4xl);
+}

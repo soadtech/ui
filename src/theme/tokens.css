@@ -118,6 +118,24 @@
   --st-transition-base: 200ms ease;
   --st-transition-slow: 300ms ease;
 
+  /* ─── Chart Colors ─── */
+  --st-color-chart-1: #22c55e;
+  --st-color-chart-1-subtle: #dcfce7;
+  --st-color-chart-1-muted: #86efac;
+  --st-color-chart-1-faded: #bbf7d0;
+  --st-color-chart-2: #3b82f6;
+  --st-color-chart-2-subtle: #dbeafe;
+  --st-color-chart-2-muted: #93c5fd;
+  --st-color-chart-2-faded: #bfdbfe;
+  --st-color-chart-3: #a78bfa;
+  --st-color-chart-3-subtle: #ede9fe;
+  --st-color-chart-4: #737373;
+  --st-color-chart-4-subtle: #f5f5f5;
+  --st-color-chart-grid: #f0f0f0;
+  --st-color-chart-axis: var(--st-color-neutral-400);
+  --st-color-chart-tooltip-bg: var(--st-color-neutral-900);
+  --st-color-chart-tooltip-fg: #ffffff;
+
   /* ─── Z-index ─── */
   --st-z-dropdown: 1000;
   --st-z-sticky: 1100;

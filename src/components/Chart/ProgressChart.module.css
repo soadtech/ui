@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  width: 100%;
+  height: var(--pc-height, 8px);
+  border-radius: var(--pc-radius, 4px);
+  overflow: hidden;
+  gap: 2px;
+}
+
+.segment {
+  min-width: 2px;
+}
+
+/* ─── Primary palette ─── */
+
+.primary .seg1 {
+  background-color: var(--st-color-chart-1);
+}
+
+.primary .seg2 {
+  background-color: var(--st-color-chart-1-muted);
+}
+
+.primary .seg3 {
+  background-color: var(--st-color-chart-1-faded);
+}
+
+.primary .seg4 {
+  background-color: var(--st-color-chart-1-subtle);
+}
+
+/* ─── Secondary palette ─── */
+
+.secondary .seg1 {
+  background-color: var(--st-color-chart-2);
+}
+
+.secondary .seg2 {
+  background-color: var(--st-color-chart-2-muted);
+}
+
+.secondary .seg3 {
+  background-color: var(--st-color-chart-2-faded);
+}
+
+.secondary .seg4 {
+  background-color: var(--st-color-chart-2-subtle);
+}

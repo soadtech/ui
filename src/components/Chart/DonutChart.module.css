@@ -1,0 +1,32 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--st-font-family);
+}
+
+.root svg {
+  display: block;
+}
+
+.center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--st-font-size-sm);
+  color: var(--st-color-foreground);
+  pointer-events: none;
+}
+
+.dark {
+  background-color: var(--st-color-neutral-900);
+  border-radius: var(--st-radius-2xl);
+}
+
+.dark .center {
+  color: var(--st-color-chart-tooltip-fg);
+}

@@ -9,6 +9,7 @@ import { BreadcrumbsSection } from './sections/BreadcrumbsSection';
 import { ButtonLinkSection } from './sections/ButtonLinkSection';
 import { CalendarSection } from './sections/CalendarSection';
 import { CardSection } from './sections/CardSection';
+import { ChartSection } from './sections/ChartSection';
 
 export function App() {
   return (
@@ -27,6 +28,7 @@ export function App() {
       <BreadcrumbsSection />
       <CalendarSection />
       <CardSection />
+      <ChartSection />
     </div>
   );
 }

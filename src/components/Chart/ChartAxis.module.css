@@ -1,0 +1,47 @@
+.root {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  gap: var(--st-space-2);
+  font-family: var(--st-font-family);
+}
+
+.yAxis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: var(--ca-chart-h);
+  text-align: right;
+  padding-right: var(--st-space-2);
+}
+
+.yLabel {
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-chart-axis);
+  line-height: 1;
+}
+
+.chartArea {
+  position: relative;
+  width: 100%;
+  height: var(--ca-chart-h);
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.xAxis {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--st-space-2);
+}
+
+.xLabel {
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-chart-axis);
+  text-align: center;
+}

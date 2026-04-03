@@ -1,0 +1,25 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(var(--gc-cols), var(--gc-cell));
+  gap: var(--gc-gap);
+}
+
+.cell {
+  width: var(--gc-cell);
+  height: var(--gc-cell);
+  border-radius: var(--st-radius-sm);
+}
+
+/* ─── Color palettes ─── */
+
+.primary .cell {
+  background-color: var(--st-color-chart-1);
+}
+
+.secondary .cell {
+  background-color: var(--st-color-chart-2);
+}
+
+.neutral .cell {
+  background-color: var(--st-color-chart-4);
+}
