@@ -187,6 +187,13 @@ export type {
   InputTextFeedbackStatus,
 } from './components/InputText';
 
+export { InputTextArea } from './components/InputTextArea';
+export type {
+  InputTextAreaProps,
+  InputTextAreaFeedback,
+  InputTextAreaFeedbackStatus,
+} from './components/InputTextArea';
+
 export {
   BarChart,
   LineChart,
