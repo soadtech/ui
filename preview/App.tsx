@@ -17,6 +17,7 @@ import { DialogSection } from './sections/DialogSection';
 import { DividerSection } from './sections/DividerSection';
 import { DropdownMenuSection } from './sections/DropdownMenuSection';
 import { FileUploadSection } from './sections/FileUploadSection';
+import { InputTextSection } from './sections/InputTextSection';
 
 export function App() {
   return (
@@ -43,6 +44,7 @@ export function App() {
       <DividerSection />
       <DropdownMenuSection />
       <FileUploadSection />
+      <InputTextSection />
     </div>
   );
 }

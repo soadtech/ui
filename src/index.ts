@@ -179,6 +179,14 @@ export type {
   FileUploadItemProps,
 } from './components/FileUpload';
 
+export { InputText } from './components/InputText';
+export type {
+  InputTextProps,
+  InputTextSize,
+  InputTextFeedback,
+  InputTextFeedbackStatus,
+} from './components/InputText';
+
 export {
   BarChart,
   LineChart,
