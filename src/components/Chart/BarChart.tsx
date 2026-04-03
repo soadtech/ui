@@ -1,6 +1,8 @@
 import { forwardRef, useMemo, useRef, useEffect, useState, useId } from 'react';
 import { cn } from '../../utils/cn';
 import { niceScale, roundedBarPath } from './chart.utils';
+import { useChartHover } from './useChartHover';
+import { HoverTooltip } from './HoverTooltip';
 import type { BarChartProps } from './BarChart.types';
 import styles from './BarChart.module.css';
 
@@ -20,6 +22,8 @@ export const BarChart = forwardRef<HTMLDivElement, BarChartProps>(
     const chartRef = useRef<HTMLDivElement>(null);
     const [chartWidth, setChartWidth] = useState(0);
     const clipId = useId();
+    const { hover, show, hide } = useChartHover();
+    const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
     useEffect(() => {
       if (!chartRef.current) return;
@@ -95,6 +99,7 @@ export const BarChart = forwardRef<HTMLDivElement, BarChartProps>(
                 <g clipPath={`url(#${clipId})`}>
                   {data.map((d, i) => {
                     const cx = groupWidth * i + groupWidth / 2;
+                    const isActive = activeIdx === i;
 
                     if (comparison && d.compareValue != null) {
                       const bw = barGroupWidth / 2 - 1;
@@ -105,10 +110,31 @@ export const BarChart = forwardRef<HTMLDivElement, BarChartProps>(
                           <path
                             d={roundedBarPath(cx - barGroupWidth / 2, height - h1, bw, h1, barRadius)}
                             fill="var(--st-color-chart-1)"
+                            opacity={isActive ? 1 : 0.85}
                           />
                           <path
                             d={roundedBarPath(cx + 1, height - h2, bw, h2, barRadius)}
                             fill="var(--st-color-chart-2)"
+                            opacity={isActive ? 1 : 0.85}
+                          />
+                          {/* Hit area */}
+                          <rect
+                            x={groupWidth * i}
+                            y={0}
+                            width={groupWidth}
+                            height={height}
+                            fill="transparent"
+                            onMouseEnter={() => {
+                              setActiveIdx(i);
+                              show(cx, height - Math.max(h1, h2), (
+                                <div>
+                                  <div style={{ fontWeight: 600, marginBottom: 2 }}>{d.label}</div>
+                                  <div>{d.value}</div>
+                                  <div>{d.compareValue}</div>
+                                </div>
+                              ));
+                            }}
+                            onMouseLeave={() => { setActiveIdx(null); hide(); }}
                           />
                         </g>
                       );
@@ -117,16 +143,37 @@ export const BarChart = forwardRef<HTMLDivElement, BarChartProps>(
                     const bw = barGroupWidth;
                     const h = scaleMax > 0 ? (d.value / scaleMax) * height : 0;
                     return (
-                      <path
-                        key={i}
-                        d={roundedBarPath(cx - bw / 2, height - h, bw, h, barRadius)}
-                        fill="var(--st-color-chart-1)"
-                      />
+                      <g key={i}>
+                        <path
+                          d={roundedBarPath(cx - bw / 2, height - h, bw, h, barRadius)}
+                          fill="var(--st-color-chart-1)"
+                          opacity={isActive ? 1 : 0.85}
+                        />
+                        {/* Hit area */}
+                        <rect
+                          x={groupWidth * i}
+                          y={0}
+                          width={groupWidth}
+                          height={height}
+                          fill="transparent"
+                          onMouseEnter={() => {
+                            setActiveIdx(i);
+                            show(cx, height - h, (
+                              <div>
+                                <div style={{ fontWeight: 600, marginBottom: 2 }}>{d.label}</div>
+                                <div>{d.value}</div>
+                              </div>
+                            ));
+                          }}
+                          onMouseLeave={() => { setActiveIdx(null); hide(); }}
+                        />
+                      </g>
                     );
                   })}
                 </g>
               </svg>
             )}
+            <HoverTooltip hover={hover} />
           </div>
 
           {/* Spacer */}

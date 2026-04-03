@@ -1,6 +1,8 @@
 import { forwardRef, useMemo, useRef, useEffect, useState, useId } from 'react';
 import { cn } from '../../utils/cn';
 import { niceScale, smoothPath, areaPath } from './chart.utils';
+import { useChartHover } from './useChartHover';
+import { HoverTooltip } from './HoverTooltip';
 import type { LineChartProps } from './LineChart.types';
 import styles from './LineChart.module.css';
 
@@ -39,6 +41,8 @@ export const LineChart = forwardRef<HTMLDivElement, LineChartProps>(
     const [chartWidth, setChartWidth] = useState(0);
     const gradId1 = useId();
     const gradId2 = useId();
+    const { hover, show, hide } = useChartHover();
+    const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
     useEffect(() => {
       if (!chartRef.current) return;
@@ -82,6 +86,8 @@ export const LineChart = forwardRef<HTMLDivElement, LineChartProps>(
           : null,
       [data, comparison, chartWidth, height, scaleMax, smooth]
     );
+
+    const slotWidth = chartWidth > 0 && data.length > 1 ? chartWidth / (data.length - 1) : chartWidth;
 
     return (
       <div ref={ref} className={cn(styles.root, className)} {...rest}>
@@ -192,18 +198,68 @@ export const LineChart = forwardRef<HTMLDivElement, LineChartProps>(
                   strokeLinecap="round"
                 />
 
-                {/* Primary dots */}
+                {/* Dots + active highlight */}
                 {primary.points.map((p, i) => (
                   <circle
                     key={i}
                     cx={p.x}
                     cy={p.y}
-                    r="3"
+                    r={activeIdx === i ? 5 : 3}
                     fill="var(--st-color-chart-1)"
+                    stroke={activeIdx === i ? 'var(--st-color-surface)' : 'none'}
+                    strokeWidth={activeIdx === i ? 2 : 0}
                   />
                 ))}
+
+                {/* Vertical indicator line */}
+                {activeIdx !== null && primary.points[activeIdx] && (
+                  <line
+                    x1={primary.points[activeIdx].x}
+                    y1={0}
+                    x2={primary.points[activeIdx].x}
+                    y2={height}
+                    stroke="var(--st-color-chart-axis)"
+                    strokeWidth="1"
+                    strokeDasharray="4 3"
+                    opacity="0.5"
+                  />
+                )}
+
+                {/* Invisible hit areas per data point */}
+                {data.map((d, i) => {
+                  const px = primary.points[i]?.x ?? 0;
+                  const py = primary.points[i]?.y ?? 0;
+                  return (
+                    <rect
+                      key={`hit-${i}`}
+                      x={px - slotWidth / 2}
+                      y={0}
+                      width={slotWidth}
+                      height={height}
+                      fill="transparent"
+                      onMouseEnter={() => {
+                        setActiveIdx(i);
+                        const content = comparison && d.compareValue != null ? (
+                          <div>
+                            <div style={{ fontWeight: 600, marginBottom: 2 }}>{d.label}</div>
+                            <div>{d.value}</div>
+                            <div>{d.compareValue}</div>
+                          </div>
+                        ) : (
+                          <div>
+                            <div style={{ fontWeight: 600, marginBottom: 2 }}>{d.label}</div>
+                            <div>{d.value}</div>
+                          </div>
+                        );
+                        show(px, py, content);
+                      }}
+                      onMouseLeave={() => { setActiveIdx(null); hide(); }}
+                    />
+                  );
+                })}
               </svg>
             )}
+            <HoverTooltip hover={hover} />
           </div>
 
           {/* Spacer */}

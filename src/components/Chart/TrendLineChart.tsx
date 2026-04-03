@@ -1,6 +1,8 @@
-import { forwardRef, useId, useMemo } from 'react';
+import { forwardRef, useId, useMemo, useState } from 'react';
 import { cn } from '../../utils/cn';
 import { smoothPath, areaPath } from './chart.utils';
+import { useChartHover } from './useChartHover';
+import { HoverTooltip } from './HoverTooltip';
 import type { TrendLineChartProps } from './TrendLineChart.types';
 import styles from './TrendLineChart.module.css';
 
@@ -33,6 +35,8 @@ export const TrendLineChart = forwardRef<HTMLDivElement, TrendLineChartProps>(
   ) => {
     const gradId = useId();
     const palette = COLOR_MAP[color];
+    const { hover, show, hide } = useChartHover();
+    const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
     const { points, linePath: line } = useMemo(() => {
       if (data.length < 2) return { points: [], linePath: '' };
@@ -56,6 +60,8 @@ export const TrendLineChart = forwardRef<HTMLDivElement, TrendLineChartProps>(
     const area = areaFill
       ? areaPath(line, height - 4, points[0].x, points[points.length - 1].x)
       : null;
+
+    const slotWidth = width / data.length;
 
     return (
       <div ref={ref} className={cn(styles.root, className)} {...rest}>
@@ -85,17 +91,38 @@ export const TrendLineChart = forwardRef<HTMLDivElement, TrendLineChartProps>(
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {showDots &&
-            points.map((p, i) => (
+          {/* Dots — always show active, optionally show all */}
+          {points.map((p, i) => (
+            (showDots || activeIdx === i) ? (
               <circle
                 key={i}
                 cx={p.x}
                 cy={p.y}
-                r="2.5"
+                r={activeIdx === i ? 3.5 : 2.5}
                 fill={palette.stroke}
+                stroke={activeIdx === i ? 'var(--st-color-surface)' : 'none'}
+                strokeWidth={activeIdx === i ? 1.5 : 0}
               />
-            ))}
+            ) : null
+          ))}
+          {/* Hit areas */}
+          {data.map((val, i) => (
+            <rect
+              key={`hit-${i}`}
+              x={points[i].x - slotWidth / 2}
+              y={0}
+              width={slotWidth}
+              height={height}
+              fill="transparent"
+              onMouseEnter={() => {
+                setActiveIdx(i);
+                show(points[i].x, points[i].y, <div>{val}</div>);
+              }}
+              onMouseLeave={() => { setActiveIdx(null); hide(); }}
+            />
+          ))}
         </svg>
+        <HoverTooltip hover={hover} />
       </div>
     );
   }

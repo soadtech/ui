@@ -1,0 +1,16 @@
+.root {
+  position: absolute;
+  z-index: var(--st-z-tooltip);
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  margin-top: -8px;
+  background-color: var(--st-color-chart-tooltip-bg);
+  color: var(--st-color-chart-tooltip-fg);
+  border-radius: var(--st-radius-lg);
+  padding: var(--st-space-2) var(--st-space-3);
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-xs);
+  white-space: nowrap;
+  box-shadow: var(--st-shadow-lg);
+  line-height: var(--st-line-height-normal);
+}
