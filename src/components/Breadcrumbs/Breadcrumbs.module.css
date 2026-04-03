@@ -1,0 +1,81 @@
+.root {
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--st-space-1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+}
+
+/* ─── Item ─── */
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  color: var(--st-color-muted);
+  line-height: var(--st-line-height-tight);
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--st-transition-fast);
+}
+
+.link:hover {
+  color: var(--st-color-foreground);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+  border-radius: var(--st-radius-sm);
+}
+
+.active {
+  color: var(--st-color-foreground);
+  font-weight: var(--st-font-weight-semibold);
+}
+
+/* ─── Icon ─── */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── Separator ─── */
+
+.separator {
+  display: inline-flex;
+  align-items: center;
+  color: var(--st-color-neutral-400);
+  user-select: none;
+}
+
+.separatorIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ─── Ellipsis ─── */
+
+.ellipsis {
+  color: var(--st-color-muted);
+  user-select: none;
+  letter-spacing: 1px;
+}

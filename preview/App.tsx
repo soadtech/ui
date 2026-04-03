@@ -5,6 +5,7 @@ import { ActionBarSection } from './sections/ActionBarSection';
 import { AlertSection } from './sections/AlertSection';
 import { AvatarSection } from './sections/AvatarSection';
 import { BadgeSection } from './sections/BadgeSection';
+import { BreadcrumbsSection } from './sections/BreadcrumbsSection';
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
       <AlertSection />
       <AvatarSection />
       <BadgeSection />
+      <BreadcrumbsSection />
     </div>
   );
 }

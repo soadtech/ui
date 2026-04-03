@@ -219,6 +219,7 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
 - **AvatarGroup** — Wraps `Avatar` children. Spacing: `overlap` (negative margins) / `spaced` (gap). `limit` prop truncates with "+N" counter. Inherits `size` to all children.
 - **Badge** — Positioning wrapper: places dot/number (`count`)/text (`label`) indicator on children. Position: `right-top`/`right-center`/`right-bottom`. Variant: `primary` (green) / `secondary` (blue). Sizes: `md`/`sm`.
 - **TrendBadge** — Standalone trend pill with `value`, `direction` (`up` green / `down` red), `inverse` (colored bg + white text), sizes `md`/`sm`.
+- **Breadcrumbs** — `Breadcrumbs` container + `BreadcrumbItem`. Separator: `chevron`/`slash`. `maxItems` collapses middle items to "...". Items support `icon?`, `href?` (link vs static). Last item auto-marked as active/current.
 
 ## Build Output
 

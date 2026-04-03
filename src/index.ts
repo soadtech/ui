@@ -42,3 +42,10 @@ export type {
   TrendDirection,
   TrendBadgeSize,
 } from './components/Badge';
+
+export { Breadcrumbs, BreadcrumbItem } from './components/Breadcrumbs';
+export type {
+  BreadcrumbsProps,
+  BreadcrumbSeparator,
+  BreadcrumbItemProps,
+} from './components/Breadcrumbs';
