@@ -256,3 +256,15 @@ export type {
   NavbarUserProps,
   NavbarUserInfo,
 } from './components/NavbarUser';
+
+export {
+  NotificationItem,
+  NotificationReply,
+  NotificationPanel,
+} from './components/Notification';
+export type {
+  NotificationItemProps,
+  NotificationCategory,
+  NotificationReplyProps,
+  NotificationPanelProps,
+} from './components/Notification';

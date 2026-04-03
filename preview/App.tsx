@@ -23,6 +23,7 @@ import { InputSearchSection } from './sections/InputSearchSection';
 import { InputTextSection } from './sections/InputTextSection';
 import { InputTextAreaSection } from './sections/InputTextAreaSection';
 import { NavbarUserSection } from './sections/NavbarUserSection';
+import { NotificationSection } from './sections/NotificationSection';
 
 export function App() {
   return (
@@ -55,6 +56,7 @@ export function App() {
       <InputTextSection />
       <InputTextAreaSection />
       <NavbarUserSection />
+      <NotificationSection />
     </div>
   );
 }
