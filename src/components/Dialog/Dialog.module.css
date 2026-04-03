@@ -1,0 +1,18 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--st-z-modal);
+  background: var(--st-color-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  width: 100%;
+  max-width: 480px;
+  background: var(--st-color-surface);
+  border-radius: var(--st-radius-xl);
+  box-shadow: var(--st-shadow-xl);
+  font-family: var(--st-font-family);
+}

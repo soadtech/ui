@@ -55,6 +55,7 @@
   --st-color-border: #e5e5e5;
   --st-color-border-strong: #d4d4d4;
   --st-color-muted: #737373;
+  --st-color-overlay: rgb(0 0 0 / 0.5);
 
   /* ─── Typography ─── */
   --st-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

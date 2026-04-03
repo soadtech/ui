@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--st-radius-full);
+  flex-shrink: 0;
+}
+
+/* ─── Status colors ─── */
+
+.info {
+  background-color: var(--st-color-info-subtle);
+  color: var(--st-color-info);
+}
+
+.success {
+  background-color: var(--st-color-success-subtle);
+  color: var(--st-color-success);
+}
+
+.warning {
+  background-color: var(--st-color-warning-subtle);
+  color: var(--st-color-warning);
+}
+
+.error {
+  background-color: var(--st-color-error-subtle);
+  color: var(--st-color-error);
+}

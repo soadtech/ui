@@ -117,6 +117,23 @@ export type {
   DateRange,
 } from './components/Calendar';
 
+export {
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  DialogIcon,
+} from './components/Dialog';
+export type {
+  DialogProps,
+  DialogHeaderProps,
+  DialogBodyProps,
+  DialogFooterProps,
+  DialogFooterLayout,
+  DialogIconProps,
+  DialogIconStatus,
+} from './components/Dialog';
+
 export { Datepicker } from './components/Datepicker';
 export type {
   DatepickerProps,

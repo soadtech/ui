@@ -13,6 +13,7 @@ import { CardSection } from './sections/CardSection';
 import { ChartSection } from './sections/ChartSection';
 import { ChipSection } from './sections/ChipSection';
 import { DatepickerSection } from './sections/DatepickerSection';
+import { DialogSection } from './sections/DialogSection';
 
 export function App() {
   return (
@@ -35,6 +36,7 @@ export function App() {
       <ChartSection />
       <ChipSection />
       <DatepickerSection />
+      <DialogSection />
     </div>
   );
 }
