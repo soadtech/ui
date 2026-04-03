@@ -1,0 +1,145 @@
+/* ─── Item base ─── */
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-tight);
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* ─── Basic variant ─── */
+
+.basic {
+  height: 40px;
+  padding: 0 var(--st-space-4);
+  gap: var(--st-space-2);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--st-color-muted);
+  font-weight: var(--st-font-weight-medium);
+  margin-bottom: -1px;
+}
+
+.basic:hover:not(.active):not(.disabled) {
+  background: var(--st-color-neutral-100);
+  color: var(--st-color-foreground);
+}
+
+.basic.active {
+  border-bottom-color: var(--st-color-success);
+  color: var(--st-color-foreground);
+  font-weight: var(--st-font-weight-semibold);
+}
+
+.basic:focus-visible {
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+/* ─── Dynamic variant ─── */
+
+.dynamic {
+  height: 36px;
+  padding: 0 var(--st-space-3);
+  gap: var(--st-space-2);
+  background: var(--st-color-background);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-lg);
+  color: var(--st-color-foreground);
+  font-weight: var(--st-font-weight-medium);
+}
+
+.dynamic:hover:not(.active):not(.disabled) {
+  background: var(--st-color-neutral-100);
+  border-color: var(--st-color-border-strong);
+}
+
+.dynamic.active {
+  background: var(--st-color-neutral-900);
+  border-color: var(--st-color-neutral-900);
+  color: #ffffff;
+}
+
+.dynamic:focus-visible {
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+/* ─── Disabled ─── */
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ─── Icon ─── */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── Label ─── */
+
+.label {
+  white-space: nowrap;
+}
+
+/* ─── Badge (basic variant) ─── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--st-radius-full);
+  background: var(--st-color-success);
+  color: var(--st-color-success-foreground);
+  font-size: var(--st-font-size-xs);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: 1;
+}
+
+/* ─── Close button (dynamic variant) ─── */
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  border-radius: var(--st-radius-full);
+  flex-shrink: 0;
+  transition: background-color 0.15s ease;
+}
+
+.close:hover {
+  background-color: var(--st-color-neutral-200);
+}
+
+.closeActive:hover {
+  background-color: var(--st-color-neutral-700);
+}
+
+.close:focus-visible {
+  box-shadow: 0 0 0 2px var(--st-color-success);
+  outline: none;
+}

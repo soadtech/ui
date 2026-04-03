@@ -1,0 +1,36 @@
+/* ─── Add button ─── */
+
+.add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-lg);
+  background: transparent;
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  outline: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.add:hover:not(:disabled) {
+  background: var(--st-color-neutral-100);
+  border-color: var(--st-color-border-strong);
+}
+
+.add:focus-visible {
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+.add:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}

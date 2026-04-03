@@ -377,3 +377,11 @@ export type {
   SwitchFieldProps,
   SwitchFieldVariant,
 } from './components/Switch';
+
+export { Tab, TabItem, TabAdd } from './components/Tab';
+export type {
+  TabProps,
+  TabVariant,
+  TabItemProps,
+  TabAddProps,
+} from './components/Tab';
