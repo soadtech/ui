@@ -117,6 +117,9 @@ export type {
   DateRange,
 } from './components/Calendar';
 
+export { Divider } from './components/Divider';
+export type { DividerProps, DividerOrientation } from './components/Divider';
+
 export {
   Dialog,
   DialogHeader,

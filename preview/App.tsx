@@ -14,6 +14,7 @@ import { ChartSection } from './sections/ChartSection';
 import { ChipSection } from './sections/ChipSection';
 import { DatepickerSection } from './sections/DatepickerSection';
 import { DialogSection } from './sections/DialogSection';
+import { DividerSection } from './sections/DividerSection';
 
 export function App() {
   return (
@@ -37,6 +38,7 @@ export function App() {
       <ChipSection />
       <DatepickerSection />
       <DialogSection />
+      <DividerSection />
     </div>
   );
 }
