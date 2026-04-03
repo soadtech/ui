@@ -40,6 +40,7 @@ import { TabSection } from './sections/TabSection';
 import { TableSection } from './sections/TableSection';
 import { TooltipSection } from './sections/TooltipSection';
 import { TreeviewListSection } from './sections/TreeviewListSection';
+import { VerificationCodeSection } from './sections/VerificationCodeSection';
 
 export function App() {
   return (
@@ -89,6 +90,7 @@ export function App() {
       <TableSection />
       <TooltipSection />
       <TreeviewListSection />
+      <VerificationCodeSection />
     </div>
   );
 }

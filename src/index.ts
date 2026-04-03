@@ -438,3 +438,6 @@ export type {
   TreeviewListProps,
   TreeviewItemProps,
 } from './components/TreeviewList';
+
+export { VerificationCode } from './components/VerificationCode';
+export type { VerificationCodeProps } from './components/VerificationCode';

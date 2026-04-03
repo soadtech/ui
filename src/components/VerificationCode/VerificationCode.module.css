@@ -1,0 +1,49 @@
+/* ─── Root ─── */
+.root {
+  display: inline-flex;
+  gap: var(--st-space-3);
+}
+
+/* ─── Digit box ─── */
+.digit {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid var(--st-color-border);
+  border-radius: var(--st-radius-full);
+  background: var(--st-color-neutral-50);
+  text-align: center;
+  font-size: var(--st-font-size-2xl);
+  font-weight: var(--st-font-weight-bold);
+  font-family: var(--st-font-family);
+  color: var(--st-color-foreground);
+  outline: none;
+  caret-color: var(--st-color-primary);
+  transition: border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+}
+
+.digit:focus {
+  border-color: var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-success);
+  background: var(--st-color-background);
+}
+
+.filled {
+  border-color: var(--st-color-border);
+  background: var(--st-color-background);
+}
+
+.digitError {
+  border-color: var(--st-color-error);
+  color: var(--st-color-error);
+}
+
+.digitError:focus {
+  border-color: var(--st-color-error);
+  box-shadow: 0 0 0 2px var(--st-color-error);
+}
+
+.digit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
