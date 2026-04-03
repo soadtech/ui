@@ -11,6 +11,7 @@ import { CalendarSection } from './sections/CalendarSection';
 import { CheckboxSection } from './sections/CheckboxSection';
 import { CardSection } from './sections/CardSection';
 import { ChartSection } from './sections/ChartSection';
+import { ChipSection } from './sections/ChipSection';
 
 export function App() {
   return (
@@ -31,6 +32,7 @@ export function App() {
       <CardSection />
       <CheckboxSection />
       <ChartSection />
+      <ChipSection />
     </div>
   );
 }

@@ -117,6 +117,14 @@ export type {
   DateRange,
 } from './components/Calendar';
 
+export { Chip, ChipGroup } from './components/Chip';
+export type {
+  ChipProps,
+  ChipVariant,
+  ChipSize,
+  ChipGroupProps,
+} from './components/Chip';
+
 export {
   BarChart,
   LineChart,

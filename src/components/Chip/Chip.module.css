@@ -1,0 +1,143 @@
+/* ─── Root ─── */
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--st-radius-full);
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-medium);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* ─── Sizes ─── */
+
+.md {
+  height: 32px;
+  padding: 0 var(--st-space-3);
+  gap: var(--st-space-2);
+  font-size: var(--st-font-size-sm);
+}
+
+.sm {
+  height: 24px;
+  padding: 0 var(--st-space-2);
+  gap: var(--st-space-1);
+  font-size: var(--st-font-size-xs);
+}
+
+/* Reduce right padding when dismiss button is present */
+.dismissible.md {
+  padding-right: var(--st-space-1);
+}
+
+.dismissible.sm {
+  padding-right: 2px;
+}
+
+/* ─── Filled variant ─── */
+
+.filled {
+  background-color: var(--st-color-neutral-100);
+  border: 1px solid transparent;
+  color: var(--st-color-foreground);
+}
+
+.filled:hover {
+  background-color: var(--st-color-neutral-200);
+}
+
+/* ─── Light variant ─── */
+
+.light {
+  background-color: var(--st-color-background);
+  border: 1px solid var(--st-color-border);
+  color: var(--st-color-foreground);
+}
+
+.light:hover {
+  border-color: var(--st-color-border-strong);
+}
+
+/* ─── Selected (overrides both variants) ─── */
+
+.selected {
+  background-color: var(--st-color-neutral-900);
+  border-color: var(--st-color-neutral-900);
+  color: #ffffff;
+}
+
+.selected:hover {
+  background-color: var(--st-color-neutral-800);
+  border-color: var(--st-color-neutral-800);
+}
+
+/* ─── Focus ─── */
+
+.root:focus-visible {
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+/* ─── Disabled ─── */
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ─── Icon ─── */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── Label ─── */
+
+.label {
+  white-space: nowrap;
+}
+
+/* ─── Dismiss button ─── */
+
+.dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  border-radius: var(--st-radius-full);
+  flex-shrink: 0;
+  transition: background-color 0.15s ease;
+}
+
+.md .dismiss {
+  width: 22px;
+  height: 22px;
+}
+
+.sm .dismiss {
+  width: 18px;
+  height: 18px;
+}
+
+/* Dismiss hover — light surfaces */
+.filled:not(.selected) .dismiss:hover,
+.light:not(.selected) .dismiss:hover {
+  background-color: var(--st-color-neutral-300);
+}
+
+/* Dismiss hover — dark/selected surfaces */
+.selected .dismiss:hover {
+  background-color: var(--st-color-neutral-700);
+}
