@@ -8,6 +8,7 @@ import { BadgeSection } from './sections/BadgeSection';
 import { BreadcrumbsSection } from './sections/BreadcrumbsSection';
 import { ButtonLinkSection } from './sections/ButtonLinkSection';
 import { CalendarSection } from './sections/CalendarSection';
+import { CardSection } from './sections/CardSection';
 
 export function App() {
   return (
@@ -25,6 +26,7 @@ export function App() {
       <BadgeSection />
       <BreadcrumbsSection />
       <CalendarSection />
+      <CardSection />
     </div>
   );
 }

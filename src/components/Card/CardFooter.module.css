@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-3);
+  padding: 0 var(--st-space-5) var(--st-space-5);
+}
+
+/* ── Border ── */
+
+.border {
+  border-top: 1px solid var(--st-color-border);
+  padding-top: var(--st-space-4);
+}
+
+/* ── Alignment ── */
+
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.between {
+  justify-content: space-between;
+}

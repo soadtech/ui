@@ -1,0 +1,31 @@
+.root {
+  /* container */
+}
+
+.grid {
+  display: grid;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--st-space-1);
+  padding: var(--st-space-4) var(--st-space-5);
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid var(--st-color-border);
+}
+
+.label {
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-muted);
+  font-weight: var(--st-font-weight-medium);
+}
+
+.value {
+  font-size: var(--st-font-size-2xl);
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+  line-height: var(--st-line-height-tight);
+}

@@ -223,6 +223,7 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
 - **ButtonLink** — Inline text link with `color` (`primary`/`secondary`/`danger`), `size` (`lg`/`md`/`sm`), `iconLeft?`/`iconRight?`, `disabled?`. Renders as `<a>`.
 - **Calendar** — Month grid with day selection. Header: `headerAlign` (`left`/`center`/`right`). Supports `value` (single date), `rangeStart`/`rangeEnd` (range mode), `events` (dot indicators), `minDate`/`maxDate`. Controlled or uncontrolled month/year navigation.
 - **CalendarDialog** — Wraps `Calendar` in a card with Cancel/Done buttons. Mode: `basic` (single calendar) / `range` (two side-by-side calendars). Range mode shows "N days selected" and ensures start ≤ end. Uses `Button` internally.
+- **Card** — Composable card system: `Card` (container, variant: `outline`/`elevated`/`filled`, padding: `none`/`sm`/`md`/`lg`) + `CardHeader` (title/icon/action, border, size: `sm`/`md`/`lg`) + `CardContent` (padded body) + `CardFooter` (border, align: `left`/`center`/`right`/`between`). Use padding prop for simple cards, sub-components for structured cards.
 
 ## Build Output
 

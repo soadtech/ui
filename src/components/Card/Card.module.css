@@ -1,0 +1,35 @@
+.root {
+  font-family: var(--st-font-family);
+  border-radius: var(--st-radius-xl);
+  overflow: hidden;
+}
+
+/* ── Variants ── */
+
+.outline {
+  background: var(--st-color-surface);
+  border: 1px solid var(--st-color-border);
+}
+
+.elevated {
+  background: var(--st-color-surface);
+  box-shadow: var(--st-shadow-md);
+}
+
+.filled {
+  background: var(--st-color-surface-raised);
+}
+
+/* ── Padding (simple cards without sub-components) ── */
+
+.padSm {
+  padding: var(--st-space-4);
+}
+
+.padMd {
+  padding: var(--st-space-5);
+}
+
+.padLg {
+  padding: var(--st-space-6);
+}

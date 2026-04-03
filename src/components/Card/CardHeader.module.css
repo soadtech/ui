@@ -1,0 +1,61 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--st-space-3);
+}
+
+/* ── Sizes ── */
+
+.sm {
+  padding: var(--st-space-2) var(--st-space-4);
+}
+
+.md {
+  padding: var(--st-space-4) var(--st-space-5);
+}
+
+.lg {
+  padding: var(--st-space-5) var(--st-space-6);
+}
+
+/* ── Border ── */
+
+.border {
+  border-bottom: 1px solid var(--st-color-border);
+}
+
+/* ── Title area ── */
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  min-width: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--st-color-muted);
+}
+
+.title {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  color: var(--st-color-foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Action area ── */
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  flex-shrink: 0;
+  margin-left: auto;
+}
