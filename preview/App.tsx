@@ -39,6 +39,7 @@ import { TagSection } from './sections/TagSection';
 import { TabSection } from './sections/TabSection';
 import { TableSection } from './sections/TableSection';
 import { TooltipSection } from './sections/TooltipSection';
+import { TreeviewListSection } from './sections/TreeviewListSection';
 
 export function App() {
   return (
@@ -87,6 +88,7 @@ export function App() {
       <TabSection />
       <TableSection />
       <TooltipSection />
+      <TreeviewListSection />
     </div>
   );
 }

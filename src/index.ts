@@ -432,3 +432,9 @@ export type {
   TooltipAlign,
   TooltipVariant,
 } from './components/Tooltip';
+
+export { TreeviewList, TreeviewItem } from './components/TreeviewList';
+export type {
+  TreeviewListProps,
+  TreeviewItemProps,
+} from './components/TreeviewList';
