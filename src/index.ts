@@ -378,6 +378,20 @@ export type {
   SwitchFieldVariant,
 } from './components/Switch';
 
+export { Tag, TagStatus, TagBrand } from './components/Tag';
+export type {
+  TagProps,
+  TagVariant,
+  TagColor,
+  TagSize,
+  TagStatusProps,
+  TagStatusType,
+  TagStatusSize,
+  TagBrandProps,
+  TagBrandVariant,
+  TagBrandColor,
+} from './components/Tag';
+
 export { Tab, TabItem, TabAdd } from './components/Tab';
 export type {
   TabProps,

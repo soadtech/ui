@@ -1,0 +1,46 @@
+/* ─── Root ─── */
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--st-radius-full);
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-medium);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* ─── Colors ─── */
+
+.brand   { --_tag-color: var(--st-color-primary);     --_tag-fg: var(--st-color-primary-foreground); }
+.neutral { --_tag-color: var(--st-color-neutral-500);  --_tag-fg: #ffffff; }
+.inverse { --_tag-color: var(--st-color-neutral-900);  --_tag-fg: #ffffff; }
+.info    { --_tag-color: var(--st-color-info);         --_tag-fg: var(--st-color-info-foreground); }
+.success { --_tag-color: var(--st-color-success);      --_tag-fg: var(--st-color-success-foreground); }
+.warning { --_tag-color: var(--st-color-warning);      --_tag-fg: var(--st-color-warning-foreground); }
+.error   { --_tag-color: var(--st-color-error);        --_tag-fg: var(--st-color-error-foreground); }
+
+/* ─── Variants ─── */
+
+.filled { background-color: var(--_tag-color); color: var(--_tag-fg); border: 1px solid transparent; }
+.stroke { background-color: transparent; color: var(--_tag-color); border: 1px solid var(--_tag-color); }
+
+/* ─── Sizes ─── */
+
+.lg { height: 28px; padding: 0 var(--st-space-3); gap: var(--st-space-1); font-size: var(--st-font-size-sm); }
+.md { height: 24px; padding: 0 var(--st-space-2); gap: var(--st-space-1); font-size: var(--st-font-size-xs); }
+.sm { height: 20px; padding: 0 6px;               gap: 2px;              font-size: var(--st-font-size-xs); }
+
+/* ─── Icon ─── */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── Label ─── */
+
+.label {
+  white-space: nowrap;
+}

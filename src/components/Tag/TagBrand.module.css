@@ -1,0 +1,42 @@
+/* ─── Root ─── */
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--st-radius-full);
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-medium);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* ─── Colors ─── */
+
+.primary   { --_tag-color: var(--st-color-primary);   --_tag-fg: var(--st-color-primary-foreground);   --_tag-subtle: var(--st-color-primary-subtle); }
+.secondary { --_tag-color: var(--st-color-secondary);  --_tag-fg: var(--st-color-secondary-foreground); --_tag-subtle: var(--st-color-secondary-subtle); }
+.tertiary  { --_tag-color: var(--st-color-tertiary);   --_tag-fg: var(--st-color-tertiary-foreground);  --_tag-subtle: var(--st-color-tertiary-subtle); }
+
+/* ─── Variants ─── */
+
+.default { background-color: var(--_tag-color); color: var(--_tag-fg); border: 1px solid transparent; }
+.inverse { background-color: var(--_tag-subtle); color: var(--_tag-color); border: 1px solid transparent; }
+
+/* ─── Sizes ─── */
+
+.lg { height: 28px; padding: 0 var(--st-space-3); gap: var(--st-space-1); font-size: var(--st-font-size-sm); }
+.md { height: 24px; padding: 0 var(--st-space-2); gap: var(--st-space-1); font-size: var(--st-font-size-xs); }
+.sm { height: 20px; padding: 0 6px;               gap: 2px;              font-size: var(--st-font-size-xs); }
+
+/* ─── Icon ─── */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── Label ─── */
+
+.label {
+  white-space: nowrap;
+}

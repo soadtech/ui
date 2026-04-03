@@ -35,6 +35,7 @@ import { SegmentedControlSection } from './sections/SegmentedControlSection';
 import { SidebarSection } from './sections/SidebarSection';
 import { StepperSection } from './sections/StepperSection';
 import { SwitchSection } from './sections/SwitchSection';
+import { TagSection } from './sections/TagSection';
 import { TabSection } from './sections/TabSection';
 import { TableSection } from './sections/TableSection';
 
@@ -81,6 +82,7 @@ export function App() {
       <SidebarSection />
       <StepperSection />
       <SwitchSection />
+      <TagSection />
       <TabSection />
       <TableSection />
     </div>

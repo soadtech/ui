@@ -13,6 +13,13 @@
   --st-color-secondary-subtle: #f5f3ff;
   --st-color-secondary-foreground: #ffffff;
 
+  /* ─── Colors: Tertiary ─── */
+  --st-color-tertiary: #ec4899;
+  --st-color-tertiary-hover: #db2777;
+  --st-color-tertiary-active: #be185d;
+  --st-color-tertiary-subtle: #fdf2f8;
+  --st-color-tertiary-foreground: #ffffff;
+
   /* ─── Colors: Neutral scale ─── */
   --st-color-neutral-50: #fafafa;
   --st-color-neutral-100: #f5f5f5;
