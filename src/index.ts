@@ -190,6 +190,13 @@ export type {
 export { InputMessage } from './components/InputMessage';
 export type { InputMessageProps } from './components/InputMessage';
 
+export { InputSearch } from './components/InputSearch';
+export type {
+  InputSearchProps,
+  InputSearchFeedback,
+  InputSearchFeedbackStatus,
+} from './components/InputSearch';
+
 export { InputText } from './components/InputText';
 export type {
   InputTextProps,

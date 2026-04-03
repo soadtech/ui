@@ -19,6 +19,7 @@ import { DropdownMenuSection } from './sections/DropdownMenuSection';
 import { FileUploadSection } from './sections/FileUploadSection';
 import { InputCounterSection } from './sections/InputCounterSection';
 import { InputMessageSection } from './sections/InputMessageSection';
+import { InputSearchSection } from './sections/InputSearchSection';
 import { InputTextSection } from './sections/InputTextSection';
 import { InputTextAreaSection } from './sections/InputTextAreaSection';
 
@@ -49,6 +50,7 @@ export function App() {
       <FileUploadSection />
       <InputCounterSection />
       <InputMessageSection />
+      <InputSearchSection />
       <InputTextSection />
       <InputTextAreaSection />
     </div>
