@@ -1,0 +1,213 @@
+.root {
+  font-family: var(--st-font-family);
+  display: inline-flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  margin-bottom: var(--st-space-2);
+}
+
+.left,
+.center,
+.right {
+  justify-content: space-between;
+}
+
+.headerSelects {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-1);
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  padding: var(--st-space-1) var(--st-space-5) var(--st-space-1) var(--st-space-1);
+  border-radius: var(--st-radius-sm);
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 4L5 6.5L7.5 4' stroke='%23737373' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--st-space-1) center;
+  transition: background-color var(--st-transition-fast);
+}
+
+.select:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.select:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+.navButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--st-radius-md);
+  cursor: pointer;
+  color: var(--st-color-foreground);
+  transition: background-color var(--st-transition-fast);
+}
+
+.navButton:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.navButton:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Weekdays ── */
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: var(--st-space-1);
+}
+
+.weekday {
+  font-size: var(--st-font-size-xs);
+  font-weight: var(--st-font-weight-medium);
+  color: var(--st-color-muted);
+  padding: var(--st-space-1) 0;
+}
+
+/* ── Day grid ── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Day cell — carries the range band background */
+.dayCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cellRangeStart {
+  background: linear-gradient(
+    to right,
+    transparent 50%,
+    var(--st-color-primary-subtle) 50%
+  );
+}
+
+.cellRangeEnd {
+  background: linear-gradient(
+    to left,
+    transparent 50%,
+    var(--st-color-primary-subtle) 50%
+  );
+}
+
+.cellRangeMiddle {
+  background-color: var(--st-color-primary-subtle);
+}
+
+/* ── Day button ── */
+
+.day {
+  all: unset;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--st-font-size-sm);
+  font-family: var(--st-font-family);
+  border-radius: var(--st-radius-full);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--st-transition-fast),
+    background-color var(--st-transition-fast);
+  user-select: none;
+}
+
+.day:hover:not(.disabled):not(.active):not(.rangeStart):not(.rangeEnd):not(.outside) {
+  color: var(--st-color-primary);
+}
+
+.day:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+/* Outside month */
+.outside {
+  color: var(--st-color-neutral-400);
+}
+
+.outside:hover:not(.disabled) {
+  color: var(--st-color-neutral-500);
+}
+
+/* Disabled */
+.disabled {
+  color: var(--st-color-neutral-300);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Today */
+.today {
+  font-weight: var(--st-font-weight-semibold);
+}
+
+/* Active / Selected */
+.active,
+.rangeStart,
+.rangeEnd {
+  background-color: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
+  font-weight: var(--st-font-weight-medium);
+}
+
+/* Range middle */
+.rangeMiddle {
+  color: var(--st-color-primary);
+}
+
+/* Event indicator dot */
+.event::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: var(--st-radius-full);
+  background-color: var(--st-color-primary);
+}
+
+.active.event::after,
+.rangeStart.event::after,
+.rangeEnd.event::after {
+  background-color: var(--st-color-primary-foreground);
+}

@@ -221,6 +221,8 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
 - **TrendBadge** — Standalone trend pill with `value`, `direction` (`up` green / `down` red), `inverse` (colored bg + white text), sizes `md`/`sm`.
 - **Breadcrumbs** — `Breadcrumbs` container + `BreadcrumbItem`. Separator: `chevron`/`slash`. `maxItems` collapses middle items to "...". Items support `icon?`, `href?` (link vs static). Last item auto-marked as active/current.
 - **ButtonLink** — Inline text link with `color` (`primary`/`secondary`/`danger`), `size` (`lg`/`md`/`sm`), `iconLeft?`/`iconRight?`, `disabled?`. Renders as `<a>`.
+- **Calendar** — Month grid with day selection. Header: `headerAlign` (`left`/`center`/`right`). Supports `value` (single date), `rangeStart`/`rangeEnd` (range mode), `events` (dot indicators), `minDate`/`maxDate`. Controlled or uncontrolled month/year navigation.
+- **CalendarDialog** — Wraps `Calendar` in a card with Cancel/Done buttons. Mode: `basic` (single calendar) / `range` (two side-by-side calendars). Range mode shows "N days selected" and ensures start ≤ end. Uses `Button` internally.
 
 ## Build Output
 
