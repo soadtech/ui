@@ -165,6 +165,21 @@ export type {
 } from './components/Chip';
 
 export {
+  FileUpload,
+  FileUploadInput,
+  FileUploadIcon,
+  FileUploadItem,
+} from './components/FileUpload';
+export type {
+  FileUploadProps,
+  FileUploadVariant,
+  FileUploadStatus,
+  FileUploadInputProps,
+  FileUploadIconProps,
+  FileUploadItemProps,
+} from './components/FileUpload';
+
+export {
   BarChart,
   LineChart,
   DonutChart,

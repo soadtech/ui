@@ -1,0 +1,140 @@
+/* ─── FileUploadInput ─── */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--st-space-1);
+}
+
+.label {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  color: var(--st-color-foreground);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+}
+
+.inputArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  padding: var(--st-space-2) var(--st-space-3);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-lg);
+  background: var(--st-color-surface);
+  min-height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fileIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--st-color-muted);
+}
+
+.fileName {
+  flex: 1;
+  font-size: var(--st-font-size-sm);
+  color: var(--st-color-foreground);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  color: var(--st-color-muted);
+}
+
+/* ─── Progress Bar ─── */
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--st-color-primary-subtle);
+  border-radius: var(--st-radius-full);
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--st-color-primary);
+  border-radius: var(--st-radius-full);
+  transition: width var(--st-transition-base);
+}
+
+/* ─── Button ─── */
+
+.button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--st-space-2) var(--st-space-4);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-full);
+  background: var(--st-color-surface);
+  color: var(--st-color-foreground);
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  font-family: var(--st-font-family);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--st-transition-fast),
+    border-color var(--st-transition-fast),
+    color var(--st-transition-fast);
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--st-color-neutral-50);
+  border-color: var(--st-color-border-strong);
+}
+
+/* ─── Complete State ─── */
+
+.complete .button {
+  background-color: var(--st-color-neutral-900);
+  border-color: var(--st-color-neutral-900);
+  color: #ffffff;
+}
+
+.complete .button:hover:not(:disabled) {
+  background-color: var(--st-color-neutral-800);
+  border-color: var(--st-color-neutral-800);
+}
+
+/* ─── Helper Text ─── */
+
+.helperText {
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-muted);
+}
+
+/* ─── Disabled ─── */
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Hidden Input ─── */
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
