@@ -300,6 +300,14 @@ export {
   RadioField,
   RadioGroup,
 } from './components/RadioButton';
+
+export { Rating } from './components/Rating';
+export type {
+  RatingProps,
+  RatingSize,
+  RatingVariant,
+  RatingIconType,
+} from './components/Rating';
 export type {
   RadioButtonProps,
   RadioSize,

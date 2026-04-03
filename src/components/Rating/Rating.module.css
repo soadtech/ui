@@ -1,0 +1,56 @@
+/* ─── Root ─── */
+.root {
+  --rating-color-active: var(--st-color-primary);
+  --rating-color-inactive: var(--st-color-neutral-200);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+}
+
+/* ─── Stars container ─── */
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* ─── Icon fills ─── */
+.iconActive {
+  fill: var(--rating-color-active);
+}
+
+.iconInactive {
+  fill: var(--rating-color-inactive);
+}
+
+/* ─── Value text ─── */
+.value {
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+}
+
+.md .value {
+  font-size: var(--st-font-size-sm);
+}
+
+.sm .value {
+  font-size: var(--st-font-size-xs);
+}
+
+/* ─── Count text ─── */
+.count {
+  font-family: var(--st-font-family);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-muted);
+}
+
+.md .count {
+  font-size: var(--st-font-size-sm);
+}
+
+.sm .count {
+  font-size: var(--st-font-size-xs);
+}

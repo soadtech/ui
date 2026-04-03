@@ -28,6 +28,7 @@ import { PaginationSection } from './sections/PaginationSection';
 import { PersonaSection } from './sections/PersonaSection';
 import { ProgressSection } from './sections/ProgressSection';
 import { RadioButtonSection } from './sections/RadioButtonSection';
+import { RatingSection } from './sections/RatingSection';
 import { RangeSliderSection } from './sections/RangeSliderSection';
 
 export function App() {
@@ -66,6 +67,7 @@ export function App() {
       <PersonaSection />
       <ProgressSection />
       <RadioButtonSection />
+      <RatingSection />
       <RangeSliderSection />
     </div>
   );
