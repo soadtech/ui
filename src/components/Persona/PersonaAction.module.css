@@ -1,0 +1,80 @@
+/* ═══ PersonaAction ═══ */
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-3);
+  padding: var(--st-space-2) var(--st-space-3);
+  border-radius: var(--st-radius-md);
+  cursor: pointer;
+  transition: background-color var(--st-transition-fast);
+  font-family: var(--st-font-family);
+}
+
+.root:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.root:active {
+  background-color: var(--st-color-neutral-200);
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+/* ─── Body ─── */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+  gap: var(--st-space-1);
+}
+
+.actionLine {
+  color: var(--st-color-muted);
+  line-height: var(--st-line-height-normal);
+}
+
+.name {
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+}
+
+.target {
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+}
+
+.timestamp {
+  color: var(--st-color-muted);
+}
+
+/* ─── Sizes ─── */
+
+.lg .actionLine {
+  font-size: var(--st-font-size-md);
+}
+
+.lg .timestamp {
+  font-size: var(--st-font-size-sm);
+}
+
+.md .actionLine {
+  font-size: var(--st-font-size-sm);
+}
+
+.md .timestamp {
+  font-size: var(--st-font-size-xs);
+}
+
+.sm .actionLine {
+  font-size: var(--st-font-size-sm);
+}
+
+.sm .timestamp {
+  font-size: var(--st-font-size-xs);
+}

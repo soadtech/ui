@@ -1,0 +1,76 @@
+/* ═══ MessageDropdown ═══ */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  max-height: 520px;
+  background-color: var(--st-color-surface);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-xl);
+  box-shadow: var(--st-shadow-lg);
+  overflow: hidden;
+}
+
+/* ─── Header ─── */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  padding: var(--st-space-4);
+  border-bottom: 1px solid var(--st-color-border);
+}
+
+.title {
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-md);
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+}
+
+.closeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--st-radius-md);
+  background: transparent;
+  color: var(--st-color-muted);
+  cursor: pointer;
+  transition: color var(--st-transition-fast),
+    background-color var(--st-transition-fast);
+}
+
+.closeBtn:hover {
+  color: var(--st-color-foreground);
+  background-color: var(--st-color-neutral-100);
+}
+
+.closeBtn:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+/* ─── Body ─── */
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ─── Footer ─── */
+
+.footer {
+  flex-shrink: 0;
+  padding: var(--st-space-3) var(--st-space-4);
+  border-top: 1px solid var(--st-color-border);
+}
+
+.footerBtn {
+  width: 100%;
+}

@@ -277,3 +277,17 @@ export type {
   NotificationReplyProps,
   NotificationPanelProps,
 } from './components/Notification';
+
+export {
+  Persona,
+  PersonaMessage,
+  PersonaAction,
+  MessageDropdown,
+} from './components/Persona';
+export type {
+  PersonaProps,
+  PersonaSize,
+  PersonaMessageProps,
+  PersonaActionProps,
+  MessageDropdownProps,
+} from './components/Persona';

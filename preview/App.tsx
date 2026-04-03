@@ -25,6 +25,7 @@ import { InputTextAreaSection } from './sections/InputTextAreaSection';
 import { NavbarUserSection } from './sections/NavbarUserSection';
 import { NotificationSection } from './sections/NotificationSection';
 import { PaginationSection } from './sections/PaginationSection';
+import { PersonaSection } from './sections/PersonaSection';
 
 export function App() {
   return (
@@ -59,6 +60,7 @@ export function App() {
       <NavbarUserSection />
       <NotificationSection />
       <PaginationSection />
+      <PersonaSection />
     </div>
   );
 }

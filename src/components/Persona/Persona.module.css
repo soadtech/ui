@@ -1,0 +1,92 @@
+/* ═══ Persona ═══ */
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-3);
+  padding: var(--st-space-2) var(--st-space-3);
+  border-radius: var(--st-radius-md);
+  cursor: pointer;
+  transition: background-color var(--st-transition-fast);
+  font-family: var(--st-font-family);
+}
+
+.root:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.root:active {
+  background-color: var(--st-color-neutral-200);
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+/* ─── Body ─── */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-1);
+}
+
+.name {
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.verifiedBadge {
+  flex-shrink: 0;
+}
+
+.username {
+  color: var(--st-color-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Chevron ─── */
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--st-color-muted);
+}
+
+/* ─── Sizes ─── */
+
+.lg .name {
+  font-size: var(--st-font-size-md);
+}
+
+.lg .username {
+  font-size: var(--st-font-size-sm);
+}
+
+.md .name {
+  font-size: var(--st-font-size-sm);
+}
+
+.md .username {
+  font-size: var(--st-font-size-xs);
+}
+
+.sm .name {
+  font-size: var(--st-font-size-sm);
+}
+
+.sm .username {
+  font-size: var(--st-font-size-xs);
+}
