@@ -250,3 +250,9 @@ export type {
   ChartTooltipItem,
   ChartTooltipVariant,
 } from './components/Chart';
+
+export { NavbarUser } from './components/NavbarUser';
+export type {
+  NavbarUserProps,
+  NavbarUserInfo,
+} from './components/NavbarUser';

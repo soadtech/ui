@@ -1,0 +1,265 @@
+/* ═══════════════════════════════════════
+   NavbarUser — Desktop / Tablet (≥768px)
+   ═══════════════════════════════════════ */
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-3);
+  padding: var(--st-space-3) var(--st-space-4);
+  font-family: var(--st-font-family);
+  background-color: var(--st-color-background);
+  min-height: 56px;
+}
+
+/* ─── Mobile lead (hidden on desktop) ─── */
+
+.mobileLead {
+  display: none;
+  align-items: center;
+  gap: var(--st-space-2);
+  flex-shrink: 0;
+}
+
+/* ─── Back button ─── */
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--st-radius-md);
+  background: transparent;
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color var(--st-transition-fast);
+}
+
+.backBtn:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.backBtn:focus-visible {
+  outline: 2px solid var(--st-color-info);
+  outline-offset: 2px;
+}
+
+/* ─── Title group ─── */
+
+.titleGroup {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: var(--st-font-size-lg);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── Actions slot ─── */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  flex-shrink: 0;
+}
+
+/* ─── User section ─── */
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  padding: var(--st-space-1) var(--st-space-2);
+  border: none;
+  border-radius: var(--st-radius-md);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: var(--st-color-foreground);
+  font-family: var(--st-font-family);
+  transition: background-color var(--st-transition-fast);
+}
+
+.userSection:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.userSection:focus-visible {
+  outline: 2px solid var(--st-color-info);
+  outline-offset: 2px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  min-width: 0;
+}
+
+.userName {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  line-height: var(--st-line-height-tight);
+  white-space: nowrap;
+}
+
+.userHandle {
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-muted);
+  white-space: nowrap;
+}
+
+.verifiedBadge {
+  flex-shrink: 0;
+}
+
+.userChevron {
+  flex-shrink: 0;
+  color: var(--st-color-muted);
+}
+
+/* ─── Close button (hidden on desktop) ─── */
+
+.closeBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--st-radius-md);
+  background: transparent;
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color var(--st-transition-fast);
+}
+
+.closeBtn:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.closeBtn:focus-visible {
+  outline: 2px solid var(--st-color-info);
+  outline-offset: 2px;
+}
+
+/* ─── Menu button ─── */
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--st-radius-md);
+  background: transparent;
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  transition: background-color var(--st-transition-fast);
+}
+
+.menuBtn:hover {
+  background-color: var(--st-color-neutral-100);
+}
+
+.menuBtn:focus-visible {
+  outline: 2px solid var(--st-color-info);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════
+   Mobile (< 768px)
+   ═══════════════════════════════════════ */
+
+@media (max-width: 767px) {
+  .root {
+    flex-wrap: wrap;
+    padding: var(--st-space-2) var(--st-space-3);
+  }
+
+  .mobileLead {
+    display: flex;
+  }
+
+  .titleGroup {
+    flex-basis: 100%;
+    order: 10;
+  }
+
+  .title {
+    font-size: var(--st-font-size-md);
+  }
+
+  /* Avatar-only on mobile */
+  .userInfo {
+    display: none;
+  }
+
+  .userChevron {
+    display: none;
+  }
+
+  .userSection {
+    padding: var(--st-space-1);
+  }
+
+  /* ─── Level 2 mobile ─── */
+
+  .level2 .mobileLead {
+    display: none;
+  }
+
+  .level2 .actions {
+    display: none;
+  }
+
+  .level2 .userSection {
+    display: none;
+  }
+
+  .level2 .closeBtn {
+    display: flex;
+  }
+
+  .level2 .titleGroup {
+    flex-basis: auto;
+    flex: 1;
+    order: 0;
+  }
+
+  .level2 .subtitle {
+    display: none;
+  }
+}
