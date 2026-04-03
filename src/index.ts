@@ -117,6 +117,12 @@ export type {
   DateRange,
 } from './components/Calendar';
 
+export { Datepicker } from './components/Datepicker';
+export type {
+  DatepickerProps,
+  DatepickerSize,
+} from './components/Datepicker';
+
 export { Chip, ChipGroup } from './components/Chip';
 export type {
   ChipProps,

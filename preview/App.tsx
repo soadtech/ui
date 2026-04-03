@@ -12,6 +12,7 @@ import { CheckboxSection } from './sections/CheckboxSection';
 import { CardSection } from './sections/CardSection';
 import { ChartSection } from './sections/ChartSection';
 import { ChipSection } from './sections/ChipSection';
+import { DatepickerSection } from './sections/DatepickerSection';
 
 export function App() {
   return (
@@ -33,6 +34,7 @@ export function App() {
       <CheckboxSection />
       <ChartSection />
       <ChipSection />
+      <DatepickerSection />
     </div>
   );
 }

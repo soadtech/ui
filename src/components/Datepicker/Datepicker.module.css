@@ -1,0 +1,133 @@
+/* ─── Root ─── */
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--st-space-2);
+  position: relative;
+  font-family: var(--st-font-family);
+}
+
+/* ─── Label ─── */
+.label {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+}
+
+/* ─── Range layout ─── */
+.rangeFields {
+  display: flex;
+  flex-direction: row;
+  gap: var(--st-space-4);
+}
+
+.fieldWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--st-space-2);
+}
+
+/* ─── Input box ─── */
+.inputBox {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-lg);
+  background: var(--st-color-surface);
+  padding: 0 var(--st-space-3);
+  cursor: pointer;
+  transition: border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+}
+
+.inputBox.lg {
+  height: 48px;
+}
+
+.inputBox.md {
+  height: 40px;
+}
+
+.inputBox:hover:not(.disabled):not(.error):not(.open) {
+  border-color: var(--st-color-border-strong);
+}
+
+.inputBox.open,
+.inputBox:focus-within:not(.disabled):not(.error) {
+  border-color: var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+.inputBox.error {
+  border-color: var(--st-color-error);
+  box-shadow: 0 0 0 2px var(--st-color-error);
+}
+
+.inputBox.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Input text ─── */
+.inputText {
+  flex: 1;
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inputText.placeholder {
+  color: var(--st-color-muted);
+}
+
+/* ─── Calendar icon button ─── */
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-radius: var(--st-radius-md);
+  color: var(--st-color-muted);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background var(--st-transition-fast);
+}
+
+.iconBtn:hover {
+  background: var(--st-color-neutral-100);
+}
+
+/* ─── Helper text ─── */
+.helperText {
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-muted);
+}
+
+/* ─── Error ─── */
+.errorText {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-error);
+}
+
+/* ─── Popover ─── */
+.popover {
+  position: absolute;
+  top: calc(100% + var(--st-space-2));
+  left: 0;
+  z-index: var(--st-z-dropdown);
+}
