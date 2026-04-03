@@ -121,6 +121,19 @@ export { Divider } from './components/Divider';
 export type { DividerProps, DividerOrientation } from './components/Divider';
 
 export {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuHeader,
+  DropdownMenuDivider,
+} from './components/DropdownMenu';
+export type {
+  DropdownMenuProps,
+  DropdownMenuItemProps,
+  DropdownMenuHeaderProps,
+  DropdownMenuDividerProps,
+} from './components/DropdownMenu';
+
+export {
   Dialog,
   DialogHeader,
   DialogBody,

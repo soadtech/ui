@@ -1,0 +1,7 @@
+.root {
+  padding: var(--st-space-2) var(--st-space-3);
+  font-size: var(--st-font-size-xs);
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-muted);
+  line-height: var(--st-line-height-normal);
+}

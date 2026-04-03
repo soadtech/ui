@@ -1,0 +1,9 @@
+.root {
+  background: var(--st-color-surface);
+  border-radius: var(--st-radius-xl);
+  box-shadow: var(--st-shadow-lg);
+  border: 1px solid var(--st-color-border);
+  padding: var(--st-space-2) 0;
+  min-width: 200px;
+  font-family: var(--st-font-family);
+}
