@@ -179,6 +179,14 @@ export type {
   FileUploadItemProps,
 } from './components/FileUpload';
 
+export { InputCounter } from './components/InputCounter';
+export type {
+  InputCounterProps,
+  InputCounterSize,
+  InputCounterFeedback,
+  InputCounterFeedbackStatus,
+} from './components/InputCounter';
+
 export { InputText } from './components/InputText';
 export type {
   InputTextProps,

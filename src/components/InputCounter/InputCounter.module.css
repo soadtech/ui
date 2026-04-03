@@ -1,0 +1,146 @@
+/* ─── Root ─── */
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--st-space-2);
+  font-family: var(--st-font-family);
+}
+
+/* ─── Label ─── */
+.label {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+}
+
+.required {
+  color: var(--st-color-error);
+  margin-left: var(--st-space-1);
+}
+
+/* ─── Counter box ─── */
+.counterBox {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--st-color-neutral-100);
+  padding: var(--st-space-1);
+  transition: border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+}
+
+.counterBox.lg {
+  height: 48px;
+}
+
+.counterBox.md {
+  height: 40px;
+}
+
+.counterBox:hover:not(.disabled):not(.error):not(.warning):not(.success):not(.ai):not(.focused) {
+  border-color: var(--st-color-border-strong);
+}
+
+.counterBox.focused:not(.disabled):not(.error):not(.warning):not(.success):not(.ai) {
+  border-color: var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+.counterBox.error {
+  border-color: var(--st-color-error);
+  box-shadow: 0 0 0 2px var(--st-color-error);
+}
+
+.counterBox.warning {
+  border-color: var(--st-color-warning);
+  box-shadow: 0 0 0 2px var(--st-color-warning);
+}
+
+.counterBox.success {
+  border-color: var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+.counterBox.ai {
+  border-color: var(--st-color-info);
+  box-shadow: 0 0 0 2px var(--st-color-info);
+}
+
+.counterBox.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Buttons ─── */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--st-color-foreground);
+  color: var(--st-color-background);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background var(--st-transition-fast);
+}
+
+.button:hover {
+  background: var(--st-color-neutral-800);
+}
+
+.button.lg {
+  width: 40px;
+  height: 40px;
+}
+
+.button.md {
+  width: 32px;
+  height: 32px;
+}
+
+/* ─── Value display ─── */
+.value {
+  flex: 1;
+  text-align: center;
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+}
+
+.value_error {
+  color: var(--st-color-error);
+}
+
+.value_ai {
+  color: var(--st-color-info);
+}
+
+/* ─── Feedback text ─── */
+.feedbackText {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+}
+
+.feedback_success {
+  color: var(--st-color-success);
+}
+
+.feedback_error {
+  color: var(--st-color-error);
+}
+
+.feedback_warning {
+  color: var(--st-color-warning);
+}
+
+.feedback_ai {
+  color: var(--st-color-info);
+}
