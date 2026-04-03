@@ -369,3 +369,11 @@ export type {
   StepperStepProps,
   StepStatus,
 } from './components/Stepper';
+
+export { Switch, SwitchField } from './components/Switch';
+export type {
+  SwitchProps,
+  SwitchSize,
+  SwitchFieldProps,
+  SwitchFieldVariant,
+} from './components/Switch';

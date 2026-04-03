@@ -1,0 +1,69 @@
+/* ─── Root ─── */
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--st-space-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ─── Content ─── */
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--st-space-0);
+}
+
+/* ─── Label ─── */
+.label {
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+}
+
+/* ─── Description ─── */
+.description {
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-muted);
+}
+
+/* ─── Card variant ─── */
+.card {
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-xl);
+  padding: var(--st-space-3) var(--st-space-4);
+  transition:
+    border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+}
+
+.card:hover:not(.disabled):not(.readOnly) {
+  border-color: var(--st-color-border-strong);
+}
+
+.card:has(input:checked) {
+  border-color: var(--st-color-success);
+}
+
+.card:has(input:focus-visible) {
+  border-color: var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+/* ─── Disabled ─── */
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ─── Read-only ─── */
+.readOnly {
+  cursor: default;
+}
