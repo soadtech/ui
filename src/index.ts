@@ -295,5 +295,18 @@ export type {
 export { Progress } from './components/Progress';
 export type { ProgressProps } from './components/Progress';
 
+export {
+  RadioButton,
+  RadioField,
+  RadioGroup,
+} from './components/RadioButton';
+export type {
+  RadioButtonProps,
+  RadioSize,
+  RadioFieldProps,
+  RadioFieldVariant,
+  RadioGroupProps,
+} from './components/RadioButton';
+
 export { RangeSlider } from './components/RangeSlider';
 export type { RangeSliderProps } from './components/RangeSlider';

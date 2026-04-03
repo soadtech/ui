@@ -1,0 +1,103 @@
+/* ─── Root ─── */
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ─── Sizes ─── */
+.md {
+  width: 20px;
+  height: 20px;
+}
+
+.sm {
+  width: 16px;
+  height: 16px;
+}
+
+/* ─── Hidden native input ─── */
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* ─── Visual circle ─── */
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--st-color-neutral-300);
+  border-radius: 50%;
+  background-color: var(--st-color-background);
+  transition:
+    background-color var(--st-transition-fast),
+    border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+}
+
+/* ─── Inner dot ─── */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--st-color-success-foreground);
+  opacity: 0;
+  transition: opacity var(--st-transition-fast);
+}
+
+.sm .dot {
+  width: 6px;
+  height: 6px;
+}
+
+/* ─── Checked state ─── */
+.root:has(.input:checked) .circle {
+  background-color: var(--st-color-success);
+  border-color: var(--st-color-success);
+}
+
+.root:has(.input:checked) .dot {
+  opacity: 1;
+}
+
+/* ─── Hover ─── */
+.root:not(.disabled):not(.readOnly):has(.input:hover) .circle {
+  border-color: var(--st-color-neutral-400);
+}
+
+.root:not(.disabled):not(.readOnly):has(.input:checked:hover) .circle {
+  background-color: var(--st-color-success-hover);
+  border-color: var(--st-color-success-hover);
+}
+
+/* ─── Focus ─── */
+.root:has(.input:focus-visible) .circle {
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+/* ─── Disabled ─── */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Read-only ─── */
+.readOnly .input {
+  cursor: default;
+}
+
+.readOnly .circle {
+  border-color: var(--st-color-neutral-200);
+}

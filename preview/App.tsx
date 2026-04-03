@@ -27,6 +27,7 @@ import { NotificationSection } from './sections/NotificationSection';
 import { PaginationSection } from './sections/PaginationSection';
 import { PersonaSection } from './sections/PersonaSection';
 import { ProgressSection } from './sections/ProgressSection';
+import { RadioButtonSection } from './sections/RadioButtonSection';
 import { RangeSliderSection } from './sections/RangeSliderSection';
 
 export function App() {
@@ -64,6 +65,7 @@ export function App() {
       <PaginationSection />
       <PersonaSection />
       <ProgressSection />
+      <RadioButtonSection />
       <RangeSliderSection />
     </div>
   );
