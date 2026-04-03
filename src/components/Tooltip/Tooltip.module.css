@@ -1,0 +1,208 @@
+/* ─── Root wrapper ─── */
+
+.root {
+  position: relative;
+  display: inline-flex;
+}
+
+/* ─── Tooltip bubble ─── */
+
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  border-radius: var(--st-radius-md);
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-normal);
+  color: var(--_tooltip-fg);
+  background-color: var(--_tooltip-bg);
+  pointer-events: none;
+}
+
+/* ─── Variants ─── */
+
+.default {
+  --_tooltip-bg: var(--st-color-surface);
+  --_tooltip-fg: var(--st-color-foreground);
+  filter: drop-shadow(0 4px 6px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 4px rgb(0 0 0 / 0.05));
+}
+
+.inverted {
+  --_tooltip-bg: var(--st-color-neutral-900);
+  --_tooltip-fg: #ffffff;
+}
+
+/* ─── Modes ─── */
+
+.rich {
+  width: 240px;
+  padding: var(--st-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--st-space-2);
+  pointer-events: auto;
+}
+
+.inline {
+  width: max-content;
+  padding: var(--st-space-1) var(--st-space-2);
+  white-space: nowrap;
+}
+
+/* ─── Rich mode inner elements ─── */
+
+.title {
+  font-weight: var(--st-font-weight-semibold);
+}
+
+.body {
+  color: var(--_tooltip-fg);
+  opacity: 0.8;
+}
+
+.action {
+  display: flex;
+  margin-top: var(--st-space-1);
+}
+
+.content {
+  /* inline content inherits */
+}
+
+/* ─── Beak ─── */
+
+.beak {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--_tooltip-bg);
+  transform: rotate(45deg);
+}
+
+/* drop-shadow on .default handles the beak shadow via the parent filter */
+
+/* ─── Placement × Alignment ─── */
+
+/* ── Top ── */
+
+.top_start {
+  bottom: calc(100% + 8px);
+  left: 0;
+}
+.top_start > .beak {
+  bottom: -4px;
+  left: 16px;
+}
+
+.top_center {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top_center > .beak {
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.top_end {
+  bottom: calc(100% + 8px);
+  right: 0;
+}
+.top_end > .beak {
+  bottom: -4px;
+  right: 16px;
+}
+
+/* ── Bottom ── */
+
+.bottom_start {
+  top: calc(100% + 8px);
+  left: 0;
+}
+.bottom_start > .beak {
+  top: -4px;
+  left: 16px;
+}
+
+.bottom_center {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom_center > .beak {
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.bottom_end {
+  top: calc(100% + 8px);
+  right: 0;
+}
+.bottom_end > .beak {
+  top: -4px;
+  right: 16px;
+}
+
+/* ── Start (left side) ── */
+
+.start_start {
+  right: calc(100% + 8px);
+  top: 0;
+}
+.start_start > .beak {
+  right: -4px;
+  top: 8px;
+}
+
+.start_center {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.start_center > .beak {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.start_end {
+  right: calc(100% + 8px);
+  bottom: 0;
+}
+.start_end > .beak {
+  right: -4px;
+  bottom: 8px;
+}
+
+/* ── End (right side) ── */
+
+.end_start {
+  left: calc(100% + 8px);
+  top: 0;
+}
+.end_start > .beak {
+  left: -4px;
+  top: 8px;
+}
+
+.end_center {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.end_center > .beak {
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.end_end {
+  left: calc(100% + 8px);
+  bottom: 0;
+}
+.end_end > .beak {
+  left: -4px;
+  bottom: 8px;
+}

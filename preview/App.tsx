@@ -38,6 +38,7 @@ import { SwitchSection } from './sections/SwitchSection';
 import { TagSection } from './sections/TagSection';
 import { TabSection } from './sections/TabSection';
 import { TableSection } from './sections/TableSection';
+import { TooltipSection } from './sections/TooltipSection';
 
 export function App() {
   return (
@@ -85,6 +86,7 @@ export function App() {
       <TagSection />
       <TabSection />
       <TableSection />
+      <TooltipSection />
     </div>
   );
 }

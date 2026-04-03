@@ -424,3 +424,11 @@ export type {
   TableFooterProps,
   TableFooterAlign,
 } from './components/Table';
+
+export { Tooltip } from './components/Tooltip';
+export type {
+  TooltipProps,
+  TooltipPlacement,
+  TooltipAlign,
+  TooltipVariant,
+} from './components/Tooltip';
