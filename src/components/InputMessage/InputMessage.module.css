@@ -1,0 +1,148 @@
+/* ─── Root ─── */
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--st-space-2);
+  font-family: var(--st-font-family);
+}
+
+/* ─── Label ─── */
+.label {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+}
+
+.required {
+  color: var(--st-color-error);
+  margin-left: var(--st-space-1);
+}
+
+/* ─── Input box (pill — wraps everything) ─── */
+.inputBox {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  border: 1px solid var(--st-color-border);
+  border-radius: 999px;
+  background: var(--st-color-surface);
+  padding: var(--st-space-1);
+  height: 48px;
+  transition: border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+}
+
+.inputBox.focused {
+  border-color: var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+.inputBox.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Plus button (bare icon, no circle) ─── */
+.plusBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--st-radius-md);
+  background: transparent;
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background var(--st-transition-fast);
+}
+
+.plusBtn:hover {
+  background: var(--st-color-neutral-100);
+}
+
+/* ─── Input ─── */
+.input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-foreground);
+  padding: 0;
+}
+
+.input::placeholder {
+  color: var(--st-color-muted);
+}
+
+/* ─── Action buttons ─── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-1);
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  padding: 0;
+  border-radius: var(--st-radius-md);
+  transition: background var(--st-transition-fast);
+}
+
+.actionBtn:hover {
+  background: var(--st-color-neutral-100);
+}
+
+/* ─── Separator ─── */
+.separator {
+  width: 1px;
+  height: 24px;
+  background: var(--st-color-border);
+  flex-shrink: 0;
+}
+
+/* ─── Send button ─── */
+.sendBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--st-color-neutral-200);
+  color: var(--st-color-muted);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background var(--st-transition-fast),
+    color var(--st-transition-fast);
+}
+
+.sendBtn:hover {
+  background: var(--st-color-neutral-300);
+}
+
+.sendBtnActive {
+  background: var(--st-color-foreground);
+  color: var(--st-color-background);
+}
+
+.sendBtnActive:hover {
+  background: var(--st-color-neutral-800);
+}

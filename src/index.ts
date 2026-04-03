@@ -187,6 +187,9 @@ export type {
   InputCounterFeedbackStatus,
 } from './components/InputCounter';
 
+export { InputMessage } from './components/InputMessage';
+export type { InputMessageProps } from './components/InputMessage';
+
 export { InputText } from './components/InputText';
 export type {
   InputTextProps,
