@@ -1,0 +1,133 @@
+/* ═══ RangeSlider ═══ */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--st-space-1);
+  font-family: var(--st-font-family);
+}
+
+/* ─── Label ─── */
+
+.label {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+}
+
+/* ─── Slider row ─── */
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-3);
+}
+
+.sliderWrap {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Track container ─── */
+
+.sliderContainer {
+  position: relative;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ─── Track ─── */
+
+.track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  transform: translateY(-50%);
+  border-radius: var(--st-radius-full);
+  background-color: var(--st-color-neutral-200);
+}
+
+/* ─── Fill ─── */
+
+.fill {
+  position: absolute;
+  top: 50%;
+  height: 6px;
+  transform: translateY(-50%);
+  border-radius: var(--st-radius-full);
+  background-color: var(--st-color-primary);
+  pointer-events: none;
+}
+
+/* ─── Thumb ─── */
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--st-radius-full);
+  background-color: var(--st-color-surface);
+  border: 2px solid var(--st-color-neutral-300);
+  box-shadow: var(--st-shadow-sm);
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  z-index: 1;
+  transition: border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+  touch-action: none;
+}
+
+.thumb:hover {
+  border-color: var(--st-color-primary);
+}
+
+.thumb:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+.thumbActive {
+  cursor: grabbing;
+  border-color: var(--st-color-primary);
+  box-shadow: var(--st-shadow-md);
+}
+
+/* ─── Value input (single mode) ─── */
+
+.valueInput {
+  width: 64px;
+  height: 36px;
+  padding: 0 var(--st-space-2);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-md);
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  text-align: center;
+  color: var(--st-color-foreground);
+  background-color: var(--st-color-surface);
+  outline: none;
+  transition: border-color var(--st-transition-fast);
+}
+
+.valueInput:focus {
+  border-color: var(--st-color-primary);
+}
+
+/* ─── Value labels (range mode) ─── */
+
+.valueLabels {
+  position: relative;
+  height: 20px;
+  margin-top: var(--st-space-1);
+}
+
+.valueLabel {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-muted);
+  white-space: nowrap;
+}

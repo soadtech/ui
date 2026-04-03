@@ -294,3 +294,6 @@ export type {
 
 export { Progress } from './components/Progress';
 export type { ProgressProps } from './components/Progress';
+
+export { RangeSlider } from './components/RangeSlider';
+export type { RangeSliderProps } from './components/RangeSlider';
