@@ -31,3 +31,14 @@ export type {
   AvatarGroupProps,
   AvatarGroupSpacing,
 } from './components/Avatar';
+
+export { Badge, TrendBadge } from './components/Badge';
+export type {
+  BadgeProps,
+  BadgePosition,
+  BadgeVariant,
+  BadgeSize,
+  TrendBadgeProps,
+  TrendDirection,
+  TrendBadgeSize,
+} from './components/Badge';

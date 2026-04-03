@@ -1,0 +1,47 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  border-radius: var(--st-radius-full);
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-semibold);
+  white-space: nowrap;
+}
+
+/* ─── Sizes ─── */
+
+.md {
+  height: 24px;
+  padding: 0 var(--st-space-2);
+  font-size: var(--st-font-size-xs);
+}
+
+.sm {
+  height: 20px;
+  padding: 0 6px;
+  font-size: 11px;
+}
+
+/* ─── Direction colors (default: subtle bg + colored text) ─── */
+
+.up {
+  background-color: var(--st-color-success-subtle);
+  color: var(--st-color-success);
+}
+
+.down {
+  background-color: var(--st-color-error-subtle);
+  color: var(--st-color-error);
+}
+
+/* ─── Inverse: colored bg + white text ─── */
+
+.inverse.up {
+  background-color: var(--st-color-success);
+  color: #ffffff;
+}
+
+.inverse.down {
+  background-color: var(--st-color-error);
+  color: #ffffff;
+}

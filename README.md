@@ -217,6 +217,8 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
 - **Alert** — Status: `info`/`success`/`warning`/`error`. Variant: `solid` (filled bg) / `alpha` (light bg + colored left border). Layout: `inline` (actions beside text) / `stacked` (actions below). Props: `title`, `description?`, `icon?`, `onClose?`, `actions?`. Default icons per status.
 - **Avatar** — Circular avatar with 3 content modes: `src` (image), `initials` (text), default icon (person silhouette). Sizes: `xl`/`lg`/`md`/`sm`. Optional green `status` indicator dot.
 - **AvatarGroup** — Wraps `Avatar` children. Spacing: `overlap` (negative margins) / `spaced` (gap). `limit` prop truncates with "+N" counter. Inherits `size` to all children.
+- **Badge** — Positioning wrapper: places dot/number (`count`)/text (`label`) indicator on children. Position: `right-top`/`right-center`/`right-bottom`. Variant: `primary` (green) / `secondary` (blue). Sizes: `md`/`sm`.
+- **TrendBadge** — Standalone trend pill with `value`, `direction` (`up` green / `down` red), `inverse` (colored bg + white text), sizes `md`/`sm`.
 
 ## Build Output
 

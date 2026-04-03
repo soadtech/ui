@@ -1,0 +1,92 @@
+.root {
+  position: relative;
+  display: inline-flex;
+}
+
+/* ─── Indicator base ─── */
+
+.indicator {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ─── Positions ─── */
+
+.rightTop {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.rightCenter {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.rightBottom {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+/* ─── Dot ─── */
+
+.dot {
+  border-radius: var(--st-radius-full);
+}
+
+.dot.md {
+  width: 10px;
+  height: 10px;
+}
+
+.dot.sm {
+  width: 8px;
+  height: 8px;
+}
+
+.dot.primary {
+  background-color: var(--st-color-success);
+}
+
+.dot.secondary {
+  background-color: var(--st-color-primary);
+}
+
+/* ─── Pill (number / text) ─── */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--st-radius-full);
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-semibold);
+  white-space: nowrap;
+}
+
+.pill.md {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  font-size: 11px;
+}
+
+.pill.sm {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 10px;
+}
+
+.pill.primary {
+  background-color: var(--st-color-success);
+  color: #ffffff;
+}
+
+.pill.secondary {
+  background-color: var(--st-color-primary);
+  color: #ffffff;
+}

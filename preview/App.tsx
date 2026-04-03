@@ -4,6 +4,7 @@ import { AccordionSection } from './sections/AccordionSection';
 import { ActionBarSection } from './sections/ActionBarSection';
 import { AlertSection } from './sections/AlertSection';
 import { AvatarSection } from './sections/AvatarSection';
+import { BadgeSection } from './sections/BadgeSection';
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
       <ActionBarSection />
       <AlertSection />
       <AvatarSection />
+      <BadgeSection />
     </div>
   );
 }
