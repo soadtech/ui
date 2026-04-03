@@ -23,3 +23,6 @@ export type {
   AlertVariant,
   AlertLayout,
 } from './components/Alert';
+
+export { Avatar } from './components/Avatar';
+export type { AvatarProps, AvatarSize } from './components/Avatar';

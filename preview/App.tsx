@@ -3,6 +3,7 @@ import { ButtonSection } from './sections/ButtonSection';
 import { AccordionSection } from './sections/AccordionSection';
 import { ActionBarSection } from './sections/ActionBarSection';
 import { AlertSection } from './sections/AlertSection';
+import { AvatarSection } from './sections/AvatarSection';
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
       <AccordionSection />
       <ActionBarSection />
       <AlertSection />
+      <AvatarSection />
     </div>
   );
 }
