@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-3);
+  padding: var(--st-space-3) var(--st-space-4);
+  border-top: 1px solid var(--st-color-border);
+  font-size: var(--st-font-size-sm);
+  color: var(--st-color-muted);
+}
+
+/* ── Alignment ── */
+
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.between {
+  justify-content: space-between;
+}

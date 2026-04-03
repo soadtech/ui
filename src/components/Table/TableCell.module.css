@@ -1,0 +1,21 @@
+.root {
+  padding: var(--_table-cell-py) var(--st-space-4);
+  font-size: var(--st-font-size-sm);
+  color: var(--st-color-foreground);
+  line-height: var(--st-line-height-normal);
+  vertical-align: middle;
+}
+
+/* ── Alignment ── */
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}

@@ -385,3 +385,28 @@ export type {
   TabItemProps,
   TabAddProps,
 } from './components/Tab';
+
+export {
+  Table,
+  TableToolbar,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHeaderCell,
+  TableCell,
+  TableFooter,
+} from './components/Table';
+export type {
+  TableProps,
+  TableSortDirection,
+  TableSize,
+  TableCellAlign,
+  TableToolbarProps,
+  TableHeaderProps,
+  TableBodyProps,
+  TableRowProps,
+  TableHeaderCellProps,
+  TableCellProps,
+  TableFooterProps,
+  TableFooterAlign,
+} from './components/Table';

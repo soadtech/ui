@@ -1,0 +1,55 @@
+.root {
+  padding: var(--_table-cell-py) var(--st-space-4);
+  font-size: var(--st-font-size-xs);
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-muted);
+  white-space: nowrap;
+  user-select: none;
+  border-bottom: 1px solid var(--st-color-border);
+}
+
+/* ── Alignment ── */
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* ── Content wrapper ── */
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+}
+
+/* ── Sort icon ── */
+
+.sortIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* ── Sortable ── */
+
+.sortable {
+  cursor: pointer;
+}
+
+.sortable:hover {
+  background: var(--st-color-neutral-100);
+  color: var(--st-color-foreground);
+}
+
+/* ── Active sort ── */
+
+.active {
+  color: var(--st-color-foreground);
+}

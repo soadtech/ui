@@ -36,6 +36,7 @@ import { SidebarSection } from './sections/SidebarSection';
 import { StepperSection } from './sections/StepperSection';
 import { SwitchSection } from './sections/SwitchSection';
 import { TabSection } from './sections/TabSection';
+import { TableSection } from './sections/TableSection';
 
 export function App() {
   return (
@@ -81,6 +82,7 @@ export function App() {
       <StepperSection />
       <SwitchSection />
       <TabSection />
+      <TableSection />
     </div>
   );
 }

@@ -1,0 +1,33 @@
+.root {
+  font-family: var(--st-font-family);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-xl);
+  overflow: hidden;
+}
+
+/* ── Scroll wrapper ── */
+
+.scrollWrapper {
+  overflow-x: auto;
+}
+
+/* ── Table element ── */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ── Size — sets cell vertical padding via custom property ── */
+
+.sm {
+  --_table-cell-py: var(--st-space-2);
+}
+
+.md {
+  --_table-cell-py: var(--st-space-3);
+}
+
+.lg {
+  --_table-cell-py: var(--st-space-4);
+}

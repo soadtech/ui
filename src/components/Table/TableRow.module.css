@@ -1,0 +1,53 @@
+.root {
+  border-bottom: 1px solid var(--st-color-border);
+  transition: background-color var(--st-transition-fast);
+}
+
+.root:hover {
+  background-color: var(--st-color-neutral-50);
+}
+
+/* ── Selected ── */
+
+.selected {
+  background-color: color-mix(
+    in srgb,
+    var(--st-color-primary) 6%,
+    var(--st-color-background)
+  );
+}
+
+.selected:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--st-color-primary) 10%,
+    var(--st-color-background)
+  );
+}
+
+/* ── Disabled ── */
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ── Last row in tbody: no double border ── */
+
+tbody > .root:last-child {
+  border-bottom: none;
+}
+
+/* ── Striped rows ── */
+
+tbody.striped > .root:nth-child(even) {
+  background-color: var(--st-color-neutral-50);
+}
+
+tbody.striped > .root.selected:nth-child(even) {
+  background-color: color-mix(
+    in srgb,
+    var(--st-color-primary) 6%,
+    var(--st-color-background)
+  );
+}
