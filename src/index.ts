@@ -62,6 +62,15 @@ export type {
   ButtonLinkSize,
 } from './components/ButtonLink';
 
+export { Checkbox, CheckboxField, CheckboxGroup } from './components/Checkbox';
+export type {
+  CheckboxProps,
+  CheckboxSize,
+  CheckboxFieldProps,
+  CheckboxFieldVariant,
+  CheckboxGroupProps,
+} from './components/Checkbox';
+
 export { Calendar, CalendarDialog } from './components/Calendar';
 
 export {

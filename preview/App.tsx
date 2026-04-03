@@ -8,6 +8,7 @@ import { BadgeSection } from './sections/BadgeSection';
 import { BreadcrumbsSection } from './sections/BreadcrumbsSection';
 import { ButtonLinkSection } from './sections/ButtonLinkSection';
 import { CalendarSection } from './sections/CalendarSection';
+import { CheckboxSection } from './sections/CheckboxSection';
 import { CardSection } from './sections/CardSection';
 import { ChartSection } from './sections/ChartSection';
 
@@ -28,6 +29,7 @@ export function App() {
       <BreadcrumbsSection />
       <CalendarSection />
       <CardSection />
+      <CheckboxSection />
       <ChartSection />
     </div>
   );

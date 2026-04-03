@@ -1,0 +1,41 @@
+/* ─── Root ─── */
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--st-space-3);
+}
+
+/* ─── Group label ─── */
+.label {
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+}
+
+/* ─── Items container ─── */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--st-space-3);
+}
+
+/* ─── Helper text ─── */
+.helperText {
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-muted);
+}
+
+/* ─── Error ─── */
+.error {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-error);
+}
