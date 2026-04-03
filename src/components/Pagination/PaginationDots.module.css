@@ -1,0 +1,60 @@
+/* ═══ PaginationDots ═══ */
+
+/* ─── Root ─── */
+.root {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ─── List ─── */
+.list {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Indicator base ─── */
+.indicator {
+  display: block;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--st-transition-fast);
+}
+
+.indicator:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+.indicator:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Dot variant ─── */
+.dot .indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--st-radius-full);
+  background-color: var(--st-color-neutral-300);
+}
+
+.dot .indicatorActive {
+  background-color: var(--st-color-neutral-900);
+}
+
+/* ─── Tab variant ─── */
+.tab .indicator {
+  width: 24px;
+  height: 4px;
+  border-radius: var(--st-radius-full);
+  background-color: var(--st-color-neutral-300);
+}
+
+.tab .indicatorActive {
+  background-color: var(--st-color-neutral-900);
+}

@@ -1,0 +1,123 @@
+/* ═══ Pagination ═══ */
+
+/* ─── Root ─── */
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  font-family: var(--st-font-family);
+}
+
+/* ─── Page text (text variant) ─── */
+.pageText {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  color: var(--st-color-foreground);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ─── Page list ─── */
+.list {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Ellipsis ─── */
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--st-font-size-sm);
+  color: var(--st-color-muted);
+  user-select: none;
+  pointer-events: none;
+}
+
+.ellipsis.sm {
+  width: 32px;
+  height: 32px;
+}
+
+.ellipsis.md {
+  width: 40px;
+  height: 40px;
+}
+
+/* ─── Page item ─── */
+.pageItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: var(--st-radius-full);
+  font-family: var(--st-font-family);
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-medium);
+  color: var(--st-color-foreground);
+  cursor: pointer;
+  transition: background-color var(--st-transition-fast),
+    color var(--st-transition-fast);
+  user-select: none;
+  padding: 0;
+}
+
+.pageItem.sm {
+  width: 32px;
+  height: 32px;
+}
+
+.pageItem.md {
+  width: 40px;
+  height: 40px;
+}
+
+.pageItem:hover:not(:disabled):not(.pageItemActive) {
+  background-color: var(--st-color-neutral-100);
+}
+
+.pageItem:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+.pageItem:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Active page ─── */
+.pageItemActive {
+  background-color: var(--st-color-neutral-900);
+  color: #ffffff;
+}
+
+.pageItemActive:hover:not(:disabled) {
+  background-color: var(--st-color-neutral-800);
+}
+
+/* ─── Congested variant ─── */
+.listCongested {
+  gap: 0;
+  border: 1px solid var(--st-color-border-strong);
+  border-radius: var(--st-radius-sm);
+  overflow: hidden;
+}
+
+.pageItemBordered {
+  border-radius: 0;
+  border-inline-start: 1px solid var(--st-color-border-strong);
+}
+
+.listCongested li:first-child .pageItemBordered {
+  border-inline-start: none;
+}
+
+.pageItemBordered.pageItemActive {
+  border-color: var(--st-color-neutral-900);
+}

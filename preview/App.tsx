@@ -24,6 +24,7 @@ import { InputTextSection } from './sections/InputTextSection';
 import { InputTextAreaSection } from './sections/InputTextAreaSection';
 import { NavbarUserSection } from './sections/NavbarUserSection';
 import { NotificationSection } from './sections/NotificationSection';
+import { PaginationSection } from './sections/PaginationSection';
 
 export function App() {
   return (
@@ -57,6 +58,7 @@ export function App() {
       <InputTextAreaSection />
       <NavbarUserSection />
       <NotificationSection />
+      <PaginationSection />
     </div>
   );
 }

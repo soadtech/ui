@@ -251,6 +251,15 @@ export type {
   ChartTooltipVariant,
 } from './components/Chart';
 
+export { Pagination, PaginationDots } from './components/Pagination';
+export type {
+  PaginationProps,
+  PaginationSize,
+  PaginationVariant,
+  PaginationDotsProps,
+  PaginationDotsVariant,
+} from './components/Pagination';
+
 export { NavbarUser } from './components/NavbarUser';
 export type {
   NavbarUserProps,
