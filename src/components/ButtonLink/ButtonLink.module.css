@@ -1,0 +1,85 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  font-family: var(--st-font-family);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--st-radius-sm);
+  transition: color var(--st-transition-fast);
+}
+
+.root:hover {
+  text-decoration: underline;
+}
+
+.root:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ─── Icon slot ─── */
+
+.iconSlot {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── Colors ─── */
+
+.primary {
+  color: var(--st-color-primary);
+}
+
+.primary:hover {
+  color: var(--st-color-primary-hover);
+}
+
+.primary:active {
+  color: var(--st-color-primary-active);
+}
+
+.secondary {
+  color: var(--st-color-neutral-600);
+}
+
+.secondary:hover {
+  color: var(--st-color-neutral-800);
+}
+
+.secondary:active {
+  color: var(--st-color-neutral-900);
+}
+
+.danger {
+  color: var(--st-color-error);
+}
+
+.danger:hover {
+  color: var(--st-color-error-hover);
+}
+
+/* ─── Sizes ─── */
+
+.lg {
+  font-size: var(--st-font-size-md);
+}
+
+.md {
+  font-size: var(--st-font-size-sm);
+}
+
+.sm {
+  font-size: var(--st-font-size-xs);
+}
+
+/* ─── Disabled ─── */
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  text-decoration: none;
+}

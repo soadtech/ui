@@ -54,3 +54,10 @@ export type {
   BreadcrumbSeparator,
   BreadcrumbItemProps,
 } from './components/Breadcrumbs';
+
+export { ButtonLink } from './components/ButtonLink';
+export type {
+  ButtonLinkProps,
+  ButtonLinkColor,
+  ButtonLinkSize,
+} from './components/ButtonLink';

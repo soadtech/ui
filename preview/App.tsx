@@ -6,6 +6,7 @@ import { AlertSection } from './sections/AlertSection';
 import { AvatarSection } from './sections/AvatarSection';
 import { BadgeSection } from './sections/BadgeSection';
 import { BreadcrumbsSection } from './sections/BreadcrumbsSection';
+import { ButtonLinkSection } from './sections/ButtonLinkSection';
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
         <p className={styles.subtitle}>Component Library Preview</p>
       </header>
       <ButtonSection />
+      <ButtonLinkSection />
       <AccordionSection />
       <ActionBarSection />
       <AlertSection />
