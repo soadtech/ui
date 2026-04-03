@@ -360,3 +360,12 @@ export type {
   SidebarNavItemProps,
   SidebarDividerProps,
 } from './components/Sidebar';
+
+export { Stepper, StepperStep } from './components/Stepper';
+export type {
+  StepperProps,
+  StepperOrientation,
+  StepperSize,
+  StepperStepProps,
+  StepStatus,
+} from './components/Stepper';

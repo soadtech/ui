@@ -1,0 +1,183 @@
+/* ── Step root ── */
+.step {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: row;
+}
+
+.horizontal {
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+/* ── Indicator column (vertical) ── */
+.indicatorCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Indicator row (horizontal) ── */
+.indicatorRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+/* ── Indicator circle ── */
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-weight: var(--st-font-weight-semibold);
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.indicator.md {
+  width: 32px;
+  height: 32px;
+  font-size: var(--st-font-size-sm);
+}
+
+.indicator.sm {
+  width: 24px;
+  height: 24px;
+  font-size: var(--st-font-size-xs);
+}
+
+/* ── Indicator status ── */
+.indicatorDefault {
+  background: transparent;
+  border: 2px solid var(--st-color-border-strong);
+  color: var(--st-color-muted);
+}
+
+.indicatorActive {
+  background: var(--st-color-primary);
+  border: 2px solid var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
+}
+
+.indicatorCompleted {
+  background: var(--st-color-success);
+  border: 2px solid var(--st-color-success);
+  color: var(--st-color-success-foreground);
+}
+
+.indicatorDisabled {
+  background: transparent;
+  border: 2px solid var(--st-color-border);
+  color: var(--st-color-muted);
+  opacity: 0.5;
+}
+
+.indicatorError {
+  background: var(--st-color-error);
+  border: 2px solid var(--st-color-error);
+  color: var(--st-color-error-foreground);
+}
+
+/* ── Connector lines ── */
+.connector {
+  background: var(--st-color-border);
+  transition: background-color 150ms ease;
+}
+
+.connectorCompleted {
+  background: var(--st-color-success);
+}
+
+.connectorHidden {
+  visibility: hidden;
+}
+
+/* Vertical connector (below indicator) */
+.connectorVertical {
+  width: 2px;
+  flex: 1;
+  min-height: var(--st-space-3);
+}
+
+/* Horizontal connector (before/after indicator) */
+.connectorHorizontal {
+  height: 2px;
+  flex: 1;
+}
+
+/* ── Body ── */
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyVertical {
+  flex: 1;
+  padding-bottom: var(--st-space-4);
+}
+
+.bodyVertical.md {
+  padding-left: var(--st-space-3);
+}
+
+.bodyVertical.sm {
+  padding-left: var(--st-space-2);
+}
+
+.bodyHorizontal {
+  align-items: center;
+  text-align: center;
+  padding-top: var(--st-space-2);
+}
+
+/* ── Title ── */
+.title {
+  font-weight: var(--st-font-weight-semibold);
+  color: var(--st-color-foreground);
+  line-height: 1.4;
+}
+
+.title.md {
+  font-size: var(--st-font-size-sm);
+}
+
+.title.sm {
+  font-size: var(--st-font-size-xs);
+}
+
+.titleError {
+  color: var(--st-color-error);
+}
+
+.titleDisabled {
+  opacity: 0.5;
+}
+
+/* ── Description ── */
+.description {
+  color: var(--st-color-muted);
+  line-height: 1.4;
+  font-size: var(--st-font-size-xs);
+}
+
+.descriptionDisabled {
+  opacity: 0.5;
+}
+
+/* ── Content slot ── */
+.content {
+  margin-top: var(--st-space-2);
+}
+
+/* ── Disabled step root ── */
+.disabled {
+  cursor: not-allowed;
+}
