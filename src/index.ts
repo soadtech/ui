@@ -291,3 +291,6 @@ export type {
   PersonaActionProps,
   MessageDropdownProps,
 } from './components/Persona';
+
+export { Progress } from './components/Progress';
+export type { ProgressProps } from './components/Progress';

@@ -26,6 +26,7 @@ import { NavbarUserSection } from './sections/NavbarUserSection';
 import { NotificationSection } from './sections/NotificationSection';
 import { PaginationSection } from './sections/PaginationSection';
 import { PersonaSection } from './sections/PersonaSection';
+import { ProgressSection } from './sections/ProgressSection';
 
 export function App() {
   return (
@@ -61,6 +62,7 @@ export function App() {
       <NotificationSection />
       <PaginationSection />
       <PersonaSection />
+      <ProgressSection />
     </div>
   );
 }
