@@ -46,7 +46,7 @@ function AlertGrid({
             <>
               <Button
                 size="sm"
-                variant={variant === 'solid' ? 'outline' : 'primary'}
+                variant={variant === 'solid' ? 'outline' : 'fill'}
               >
                 {statusButtons[status]}
               </Button>

@@ -4,7 +4,7 @@
   justify-content: center;
   gap: var(--st-space-2);
   border: 1px solid transparent;
-  border-radius: var(--st-radius-md);
+  border-radius: var(--st-radius-full);
   font-family: var(--st-font-family);
   font-weight: var(--st-font-weight-medium);
   line-height: var(--st-line-height-tight);
@@ -28,86 +28,142 @@
   pointer-events: none;
 }
 
-/* ─── Variants ─── */
+/* ─── Icon slot ─── */
 
-.primary {
-  background-color: var(--st-color-primary);
-  color: var(--st-color-primary-foreground);
+.iconSlot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.primary:hover {
-  background-color: var(--st-color-primary-hover);
+/* ═══════════════════════════════════════
+   Fill variant
+   ═══════════════════════════════════════ */
+
+.fill.primary {
+  background-color: var(--st-color-neutral-900);
+  color: #ffffff;
 }
 
-.primary:active {
-  background-color: var(--st-color-primary-active);
+.fill.primary:hover:not(:disabled) {
+  background-color: var(--st-color-neutral-800);
 }
 
-.secondary {
-  background-color: var(--st-color-secondary);
-  color: var(--st-color-secondary-foreground);
+.fill.primary:active:not(:disabled) {
+  background-color: var(--st-color-neutral-950);
 }
 
-.secondary:hover {
-  background-color: var(--st-color-secondary-hover);
-}
-
-.secondary:active {
-  background-color: var(--st-color-secondary-active);
-}
-
-.outline {
-  background-color: transparent;
-  color: var(--st-color-foreground);
-  border-color: var(--st-color-border-strong);
-}
-
-.outline:hover {
-  background-color: var(--st-color-neutral-100);
-}
-
-.outline:active {
-  background-color: var(--st-color-neutral-200);
-}
-
-.ghost {
-  background-color: transparent;
-  color: var(--st-color-foreground);
-}
-
-.ghost:hover {
-  background-color: var(--st-color-neutral-100);
-}
-
-.ghost:active {
-  background-color: var(--st-color-neutral-200);
-}
-
-.destructive {
+.fill.danger {
   background-color: var(--st-color-error);
-  color: var(--st-color-error-foreground);
+  color: #ffffff;
 }
 
-.destructive:hover {
+.fill.danger:hover:not(:disabled) {
   background-color: var(--st-color-error-hover);
 }
 
-/* ─── Sizes ─── */
+.fill.danger:active:not(:disabled) {
+  background-color: #991b1b;
+}
 
-.sm {
-  height: 2rem;
-  padding: var(--st-space-1) var(--st-space-3);
-  font-size: var(--st-font-size-sm);
+/* ═══════════════════════════════════════
+   Outline variant
+   ═══════════════════════════════════════ */
+
+.outline.primary {
+  background-color: transparent;
+  border-color: var(--st-color-neutral-300);
+  color: var(--st-color-neutral-900);
+}
+
+.outline.primary:hover:not(:disabled) {
+  background-color: var(--st-color-neutral-100);
+}
+
+.outline.primary:active:not(:disabled) {
+  background-color: var(--st-color-neutral-200);
+}
+
+.outline.danger {
+  background-color: transparent;
+  border-color: var(--st-color-error);
+  color: var(--st-color-error);
+}
+
+.outline.danger:hover:not(:disabled) {
+  background-color: var(--st-color-error-subtle);
+}
+
+.outline.danger:active:not(:disabled) {
+  background-color: #fee2e2;
+}
+
+/* ═══════════════════════════════════════
+   Ghost variant
+   ═══════════════════════════════════════ */
+
+.ghost.primary {
+  background-color: transparent;
+  color: var(--st-color-neutral-900);
+}
+
+.ghost.primary:hover:not(:disabled) {
+  background-color: var(--st-color-neutral-100);
+}
+
+.ghost.primary:active:not(:disabled) {
+  background-color: var(--st-color-neutral-200);
+}
+
+.ghost.danger {
+  background-color: transparent;
+  color: var(--st-color-error);
+}
+
+.ghost.danger:hover:not(:disabled) {
+  background-color: var(--st-color-error-subtle);
+}
+
+.ghost.danger:active:not(:disabled) {
+  background-color: #fee2e2;
+}
+
+/* ═══════════════════════════════════════
+   Sizes
+   ═══════════════════════════════════════ */
+
+.lg {
+  height: 48px;
+  padding: 0 var(--st-space-5);
+  font-size: var(--st-font-size-md);
 }
 
 .md {
-  height: 2.5rem;
-  padding: var(--st-space-2) var(--st-space-4);
+  height: 40px;
+  padding: 0 var(--st-space-4);
   font-size: var(--st-font-size-sm);
 }
 
-.lg {
-  height: 3rem;
-  padding: var(--st-space-2) var(--st-space-6);
-  font-size: var(--st-font-size-md);
+.sm {
+  height: 32px;
+  padding: 0 var(--st-space-3);
+  font-size: var(--st-font-size-sm);
+}
+
+/* ─── Icon-only: square aspect ratio ─── */
+
+.iconOnly.lg {
+  width: 48px;
+  padding: 0;
+}
+
+.iconOnly.md {
+  width: 40px;
+  padding: 0;
+}
+
+.iconOnly.sm {
+  width: 32px;
+  padding: 0;
 }

@@ -211,7 +211,7 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
 
 ## Existing Components
 
-- **Button** — Variants: `primary`, `secondary`, `outline`, `ghost`, `destructive`. Sizes: `sm`, `md`, `lg`.
+- **Button** — Variant: `fill`/`outline`/`ghost`. Color: `primary` (dark neutral) / `danger` (red). Sizes: `lg`/`md`/`sm`. Props: `iconLeft?`, `iconRight?`. Icon-only mode when no children. Pill-shaped (`border-radius: full`).
 - **Accordion** — Container (`Accordion`) + items (`AccordionItem`). Type: `single`/`multiple`. Variant: `collapsible`/`accordion`/`showmore`. Uses React Context.
 - **ActionBar** — Horizontal flex container (`ActionBar`) + text link (`ActionBarLink` with optional `external` icon). Compose with existing components as children.
 - **Alert** — Status: `info`/`success`/`warning`/`error`. Variant: `solid` (filled bg) / `alpha` (light bg + colored left border). Layout: `inline` (actions beside text) / `stacked` (actions below). Props: `title`, `description?`, `icon?`, `onClose?`, `actions?`. Default icons per status.
