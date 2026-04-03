@@ -319,6 +319,18 @@ export type {
 export { RangeSlider } from './components/RangeSlider';
 export type { RangeSliderProps } from './components/RangeSlider';
 
+export { SelectDropdown } from './components/SelectDropdown';
+export type {
+  SelectDropdownProps,
+  SelectDropdownSize,
+  SelectDropdownFeedback,
+  SelectDropdownFeedbackStatus,
+  SelectOption,
+  SelectOptionGroup,
+  SingleSelectProps,
+  MultiSelectProps,
+} from './components/SelectDropdown';
+
 export {
   SegmentedControl,
   SegmentedControlItem,

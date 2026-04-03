@@ -1,0 +1,101 @@
+/* ─── Option row ─── */
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  padding: var(--st-space-2) var(--st-space-3);
+  cursor: pointer;
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-foreground);
+  transition:
+    background-color var(--st-transition-fast),
+    color var(--st-transition-fast);
+  outline: none;
+}
+
+/* ─── Highlighted (keyboard) ─── */
+.option.highlighted {
+  background-color: var(--st-color-neutral-100);
+}
+
+/* ─── Hover ─── */
+.option:hover:not(.disabled) {
+  background-color: var(--st-color-neutral-100);
+}
+
+/* ─── Disabled ─── */
+.option.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Checkbox (multiselect) ─── */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.checkboxBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--st-color-neutral-300);
+  border-radius: var(--st-radius-sm);
+  background-color: var(--st-color-background);
+  transition:
+    background-color var(--st-transition-fast),
+    border-color var(--st-transition-fast);
+}
+
+.checkboxBox.checked {
+  background-color: var(--st-color-success);
+  border-color: var(--st-color-success);
+}
+
+.checkboxIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--st-color-success-foreground);
+}
+
+.checkboxIcon svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ─── Content ─── */
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-muted);
+  line-height: var(--st-line-height-normal);
+}
+
+/* ─── Check icon (single select) ─── */
+.checkIcon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: auto;
+  color: var(--st-color-success);
+}

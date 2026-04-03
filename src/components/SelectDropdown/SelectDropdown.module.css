@@ -1,0 +1,214 @@
+/* ─── Root ─── */
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--st-space-2);
+  position: relative;
+  font-family: var(--st-font-family);
+}
+
+/* ─── Label ─── */
+.label {
+  font-size: var(--st-font-size-sm);
+  font-weight: var(--st-font-weight-semibold);
+  line-height: var(--st-line-height-tight);
+  color: var(--st-color-foreground);
+}
+
+.required {
+  color: var(--st-color-error);
+  margin-left: var(--st-space-1);
+}
+
+/* ─── Trigger ─── */
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-2);
+  border: 1px solid var(--st-color-border);
+  border-radius: var(--st-radius-lg);
+  background: var(--st-color-surface);
+  padding: 0 var(--st-space-3);
+  cursor: pointer;
+  transition:
+    border-color var(--st-transition-fast),
+    box-shadow var(--st-transition-fast);
+}
+
+.trigger.lg {
+  height: 48px;
+}
+
+.trigger.md {
+  height: 40px;
+}
+
+.trigger:hover:not(.disabled):not(.error):not(.warning):not(.success):not(.ai):not(.open) {
+  border-color: var(--st-color-border-strong);
+}
+
+.trigger.open:not(.disabled):not(.error):not(.warning):not(.ai) {
+  border-color: var(--st-color-border-strong);
+}
+
+.trigger.error {
+  border-color: var(--st-color-error);
+  box-shadow: 0 0 0 2px var(--st-color-error);
+}
+
+.trigger.warning {
+  border-color: var(--st-color-warning);
+  box-shadow: 0 0 0 2px var(--st-color-warning);
+}
+
+.trigger.success {
+  border-color: var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-success);
+}
+
+.trigger.ai {
+  border-color: var(--st-color-info);
+  box-shadow: 0 0 0 2px var(--st-color-info);
+}
+
+.trigger.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── Value / Placeholder ─── */
+.value {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.placeholder {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--st-font-size-sm);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Chevron ─── */
+.chevron {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--st-color-muted);
+  transition: transform var(--st-transition-fast);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ─── Chip area (multiselect) ─── */
+.chipArea {
+  display: flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* ─── Value chip ─── */
+.valueChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  height: 24px;
+  padding: 0 var(--st-space-2);
+  background: var(--st-color-success);
+  color: var(--st-color-success-foreground);
+  border-radius: 9999px;
+  font-size: var(--st-font-size-xs);
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.chipLabel {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chipDismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 9999px;
+  opacity: 0.8;
+  transition: opacity var(--st-transition-fast);
+}
+
+.chipDismiss:hover {
+  opacity: 1;
+}
+
+/* ─── Overflow counter ─── */
+.overflowCount {
+  font-size: var(--st-font-size-xs);
+  color: var(--st-color-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ─── Helper text ─── */
+.helperText {
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+  color: var(--st-color-muted);
+}
+
+/* ─── Feedback text ─── */
+.feedbackText {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-space-1);
+  font-size: var(--st-font-size-xs);
+  line-height: var(--st-line-height-normal);
+}
+
+.feedback_success {
+  color: var(--st-color-success);
+}
+
+.feedback_error {
+  color: var(--st-color-error);
+}
+
+.feedback_warning {
+  color: var(--st-color-warning);
+}
+
+.feedback_ai {
+  color: var(--st-color-info);
+}
+
+/* ─── Popover ─── */
+.popover {
+  position: absolute;
+  top: calc(100% + var(--st-space-2));
+  left: 0;
+  width: 100%;
+  z-index: var(--st-z-dropdown);
+}
