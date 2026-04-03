@@ -1,0 +1,56 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  background: var(--st-color-neutral-100);
+  padding: 4px;
+  border-radius: var(--st-radius-full);
+}
+
+/* Sizes — custom properties inherited by items */
+.lg {
+  --sc-height: 40px;
+  --sc-px: var(--st-space-4);
+  --sc-font: var(--st-font-size-sm);
+  --sc-gap: var(--st-space-2);
+}
+
+.md {
+  --sc-height: 32px;
+  --sc-px: var(--st-space-3);
+  --sc-font: var(--st-font-size-sm);
+  --sc-gap: var(--st-space-1);
+}
+
+.sm {
+  --sc-height: 28px;
+  --sc-px: var(--st-space-2);
+  --sc-font: var(--st-font-size-xs);
+  --sc-gap: var(--st-space-1);
+}
+
+/* Button variant — connected, position-based corners */
+.button {
+  gap: 0;
+}
+
+.button > *:first-child {
+  border-radius: var(--st-radius-full) 0 0 var(--st-radius-full);
+}
+
+.button > *:last-child {
+  border-radius: 0 var(--st-radius-full) var(--st-radius-full) 0;
+}
+
+.button > *:only-child {
+  border-radius: var(--st-radius-full);
+}
+
+/* Tag variant — each item independently pill-shaped */
+.tag {
+  gap: 2px;
+}
+
+.tag > * {
+  border-radius: var(--st-radius-full);
+}

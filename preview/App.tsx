@@ -30,6 +30,7 @@ import { ProgressSection } from './sections/ProgressSection';
 import { RadioButtonSection } from './sections/RadioButtonSection';
 import { RatingSection } from './sections/RatingSection';
 import { RangeSliderSection } from './sections/RangeSliderSection';
+import { SegmentedControlSection } from './sections/SegmentedControlSection';
 
 export function App() {
   return (
@@ -69,6 +70,7 @@ export function App() {
       <RadioButtonSection />
       <RatingSection />
       <RangeSliderSection />
+      <SegmentedControlSection />
     </div>
   );
 }

@@ -318,3 +318,14 @@ export type {
 
 export { RangeSlider } from './components/RangeSlider';
 export type { RangeSliderProps } from './components/RangeSlider';
+
+export {
+  SegmentedControl,
+  SegmentedControlItem,
+} from './components/SegmentedControl';
+export type {
+  SegmentedControlProps,
+  SegmentedControlSize,
+  SegmentedControlVariant,
+  SegmentedControlItemProps,
+} from './components/SegmentedControl';
