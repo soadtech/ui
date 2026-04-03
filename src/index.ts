@@ -24,5 +24,10 @@ export type {
   AlertLayout,
 } from './components/Alert';
 
-export { Avatar } from './components/Avatar';
-export type { AvatarProps, AvatarSize } from './components/Avatar';
+export { Avatar, AvatarGroup } from './components/Avatar';
+export type {
+  AvatarProps,
+  AvatarSize,
+  AvatarGroupProps,
+  AvatarGroupSpacing,
+} from './components/Avatar';

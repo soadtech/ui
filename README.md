@@ -216,6 +216,7 @@ All tokens use `--st-` prefix. Defined in `src/theme/tokens.css`:
 - **ActionBar** — Horizontal flex container (`ActionBar`) + text link (`ActionBarLink` with optional `external` icon). Compose with existing components as children.
 - **Alert** — Status: `info`/`success`/`warning`/`error`. Variant: `solid` (filled bg) / `alpha` (light bg + colored left border). Layout: `inline` (actions beside text) / `stacked` (actions below). Props: `title`, `description?`, `icon?`, `onClose?`, `actions?`. Default icons per status.
 - **Avatar** — Circular avatar with 3 content modes: `src` (image), `initials` (text), default icon (person silhouette). Sizes: `xl`/`lg`/`md`/`sm`. Optional green `status` indicator dot.
+- **AvatarGroup** — Wraps `Avatar` children. Spacing: `overlap` (negative margins) / `spaced` (gap). `limit` prop truncates with "+N" counter. Inherits `size` to all children.
 
 ## Build Output
 
