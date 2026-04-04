@@ -1,0 +1,12 @@
+{
+  "extends": "../packages/ui/tsconfig.json",
+  "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
+    "paths": {
+      "soadtech-ui": ["../packages/ui/src/index.ts"],
+      "soadtech-ui/*": ["../packages/ui/src/*"]
+    }
+  },
+  "include": [".", "../packages/ui/css-modules.d.ts"]
+}

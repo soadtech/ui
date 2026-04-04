@@ -2,7 +2,9 @@
   "name": "soadtech-ui",
   "version": "0.1.0",
   "type": "module",
-  "sideEffects": ["**/*.css"],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -18,9 +20,10 @@
     "./theme/tokens.css": "./dist/theme/tokens.css",
     "./theme/reset.css": "./dist/theme/reset.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite --config vite.preview.config.ts",
     "build": "vite build",
     "typecheck": "tsc --noEmit -p tsconfig.lib.json"
   },
@@ -32,13 +35,13 @@
     "clsx": "^2.1.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "typescript": "^5.7.3",
-    "vite": "^6.0.7",
-    "vite-plugin-dts": "^4.3.0",
-    "vite-plugin-lib-inject-css": "^2.1.1"
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.3",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-lib-inject-css": "^2.2.2"
   }
 }

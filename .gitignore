@@ -2,3 +2,7 @@ node_modules/
 dist/
 *.local
 .DS_Store
+
+# CLI registry (generated at build time)
+packages/cli/registry/components/
+packages/cli/registry/base/
