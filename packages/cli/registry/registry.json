@@ -1,0 +1,746 @@
+{
+  "version": "0.1.0",
+  "components": {
+    "Accordion": {
+      "name": "Accordion",
+      "files": [
+        "Accordion.module.css",
+        "Accordion.tsx",
+        "Accordion.types.ts",
+        "AccordionContext.ts",
+        "AccordionItem.module.css",
+        "AccordionItem.tsx",
+        "AccordionItem.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "ActionBar": {
+      "name": "ActionBar",
+      "files": [
+        "ActionBar.module.css",
+        "ActionBar.tsx",
+        "ActionBar.types.ts",
+        "ActionBarLink.module.css",
+        "ActionBarLink.tsx",
+        "ActionBarLink.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Alert": {
+      "name": "Alert",
+      "files": [
+        "Alert.module.css",
+        "Alert.tsx",
+        "Alert.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Avatar": {
+      "name": "Avatar",
+      "files": [
+        "Avatar.module.css",
+        "Avatar.tsx",
+        "Avatar.types.ts",
+        "AvatarGroup.module.css",
+        "AvatarGroup.tsx",
+        "AvatarGroup.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Badge": {
+      "name": "Badge",
+      "files": [
+        "Badge.module.css",
+        "Badge.tsx",
+        "Badge.types.ts",
+        "TrendBadge.module.css",
+        "TrendBadge.tsx",
+        "TrendBadge.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Breadcrumbs": {
+      "name": "Breadcrumbs",
+      "files": [
+        "BreadcrumbItem.tsx",
+        "Breadcrumbs.module.css",
+        "Breadcrumbs.tsx",
+        "Breadcrumbs.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Button": {
+      "name": "Button",
+      "files": [
+        "Button.module.css",
+        "Button.tsx",
+        "Button.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "ButtonLink": {
+      "name": "ButtonLink",
+      "files": [
+        "ButtonLink.module.css",
+        "ButtonLink.tsx",
+        "ButtonLink.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Calendar": {
+      "name": "Calendar",
+      "files": [
+        "Calendar.module.css",
+        "Calendar.tsx",
+        "Calendar.types.ts",
+        "CalendarDialog.module.css",
+        "CalendarDialog.tsx",
+        "CalendarDialog.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [
+        "Button"
+      ],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Card": {
+      "name": "Card",
+      "files": [
+        "Card.module.css",
+        "Card.tsx",
+        "Card.types.ts",
+        "CardContent.module.css",
+        "CardContent.tsx",
+        "CardFooter.module.css",
+        "CardFooter.tsx",
+        "CardHeader.module.css",
+        "CardHeader.tsx",
+        "InsightCard.module.css",
+        "InsightCard.tsx",
+        "InsightCard.types.ts",
+        "KPICard.module.css",
+        "KPICard.tsx",
+        "KPICard.types.ts",
+        "ListItemCard.module.css",
+        "ListItemCard.tsx",
+        "ListItemCard.types.ts",
+        "PlanCard.module.css",
+        "PlanCard.tsx",
+        "PlanCard.types.ts",
+        "ProductCard.module.css",
+        "ProductCard.tsx",
+        "ProductCard.types.ts",
+        "StatCard.module.css",
+        "StatCard.tsx",
+        "StatCard.types.ts",
+        "UserGroupCard.module.css",
+        "UserGroupCard.tsx",
+        "UserGroupCard.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [
+        "Avatar",
+        "Button"
+      ],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Chart": {
+      "name": "Chart",
+      "files": [
+        "BarChart.module.css",
+        "BarChart.tsx",
+        "BarChart.types.ts",
+        "ChartAction.module.css",
+        "ChartAction.tsx",
+        "ChartAction.types.ts",
+        "ChartAxis.module.css",
+        "ChartAxis.tsx",
+        "ChartAxis.types.ts",
+        "ChartLegend.module.css",
+        "ChartLegend.tsx",
+        "ChartLegend.types.ts",
+        "ChartTooltip.module.css",
+        "ChartTooltip.tsx",
+        "ChartTooltip.types.ts",
+        "DonutChart.module.css",
+        "DonutChart.tsx",
+        "DonutChart.types.ts",
+        "GridChart.module.css",
+        "GridChart.tsx",
+        "GridChart.types.ts",
+        "HoverTooltip.module.css",
+        "HoverTooltip.tsx",
+        "KPIIndicator.module.css",
+        "KPIIndicator.tsx",
+        "KPIIndicator.types.ts",
+        "LineChart.module.css",
+        "LineChart.tsx",
+        "LineChart.types.ts",
+        "ProgressChart.module.css",
+        "ProgressChart.tsx",
+        "ProgressChart.types.ts",
+        "TrendLineChart.module.css",
+        "TrendLineChart.tsx",
+        "TrendLineChart.types.ts",
+        "chart.utils.ts",
+        "index.ts",
+        "useChartHover.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Checkbox": {
+      "name": "Checkbox",
+      "files": [
+        "Checkbox.module.css",
+        "Checkbox.tsx",
+        "Checkbox.types.ts",
+        "CheckboxField.module.css",
+        "CheckboxField.tsx",
+        "CheckboxField.types.ts",
+        "CheckboxGroup.module.css",
+        "CheckboxGroup.tsx",
+        "CheckboxGroup.types.ts",
+        "CheckboxGroupContext.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Chip": {
+      "name": "Chip",
+      "files": [
+        "Chip.module.css",
+        "Chip.tsx",
+        "Chip.types.ts",
+        "ChipGroup.module.css",
+        "ChipGroup.tsx",
+        "ChipGroup.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Datepicker": {
+      "name": "Datepicker",
+      "files": [
+        "Datepicker.module.css",
+        "Datepicker.tsx",
+        "Datepicker.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [
+        "Calendar"
+      ],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Dialog": {
+      "name": "Dialog",
+      "files": [
+        "Dialog.module.css",
+        "Dialog.tsx",
+        "Dialog.types.ts",
+        "DialogBody.module.css",
+        "DialogBody.tsx",
+        "DialogContext.ts",
+        "DialogFooter.module.css",
+        "DialogFooter.tsx",
+        "DialogHeader.module.css",
+        "DialogHeader.tsx",
+        "DialogIcon.module.css",
+        "DialogIcon.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Divider": {
+      "name": "Divider",
+      "files": [
+        "Divider.module.css",
+        "Divider.tsx",
+        "Divider.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "DropdownMenu": {
+      "name": "DropdownMenu",
+      "files": [
+        "DropdownMenu.module.css",
+        "DropdownMenu.tsx",
+        "DropdownMenu.types.ts",
+        "DropdownMenuDivider.module.css",
+        "DropdownMenuDivider.tsx",
+        "DropdownMenuHeader.module.css",
+        "DropdownMenuHeader.tsx",
+        "DropdownMenuItem.module.css",
+        "DropdownMenuItem.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "FileUpload": {
+      "name": "FileUpload",
+      "files": [
+        "FileUpload.module.css",
+        "FileUpload.tsx",
+        "FileUpload.types.ts",
+        "FileUploadIcon.module.css",
+        "FileUploadIcon.tsx",
+        "FileUploadInput.module.css",
+        "FileUploadInput.tsx",
+        "FileUploadItem.module.css",
+        "FileUploadItem.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "InputCounter": {
+      "name": "InputCounter",
+      "files": [
+        "InputCounter.module.css",
+        "InputCounter.tsx",
+        "InputCounter.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "InputMessage": {
+      "name": "InputMessage",
+      "files": [
+        "InputMessage.module.css",
+        "InputMessage.tsx",
+        "InputMessage.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "InputSearch": {
+      "name": "InputSearch",
+      "files": [
+        "InputSearch.module.css",
+        "InputSearch.tsx",
+        "InputSearch.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "InputText": {
+      "name": "InputText",
+      "files": [
+        "InputText.module.css",
+        "InputText.tsx",
+        "InputText.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "InputTextArea": {
+      "name": "InputTextArea",
+      "files": [
+        "InputTextArea.module.css",
+        "InputTextArea.tsx",
+        "InputTextArea.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "NavbarUser": {
+      "name": "NavbarUser",
+      "files": [
+        "NavbarUser.module.css",
+        "NavbarUser.tsx",
+        "NavbarUser.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [
+        "Avatar"
+      ],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Notification": {
+      "name": "Notification",
+      "files": [
+        "Notification.types.ts",
+        "NotificationItem.module.css",
+        "NotificationItem.tsx",
+        "NotificationPanel.module.css",
+        "NotificationPanel.tsx",
+        "NotificationReply.module.css",
+        "NotificationReply.tsx",
+        "index.ts"
+      ],
+      "dependencies": [
+        "Avatar",
+        "Button"
+      ],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Pagination": {
+      "name": "Pagination",
+      "files": [
+        "Pagination.module.css",
+        "Pagination.tsx",
+        "Pagination.types.ts",
+        "PaginationDots.module.css",
+        "PaginationDots.tsx",
+        "PaginationDots.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [
+        "Button"
+      ],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Persona": {
+      "name": "Persona",
+      "files": [
+        "MessageDropdown.module.css",
+        "MessageDropdown.tsx",
+        "Persona.module.css",
+        "Persona.tsx",
+        "Persona.types.ts",
+        "PersonaAction.module.css",
+        "PersonaAction.tsx",
+        "PersonaMessage.module.css",
+        "PersonaMessage.tsx",
+        "index.ts"
+      ],
+      "dependencies": [
+        "Avatar",
+        "Button"
+      ],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Progress": {
+      "name": "Progress",
+      "files": [
+        "Progress.module.css",
+        "Progress.tsx",
+        "Progress.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "RadioButton": {
+      "name": "RadioButton",
+      "files": [
+        "RadioButton.module.css",
+        "RadioButton.tsx",
+        "RadioButton.types.ts",
+        "RadioField.module.css",
+        "RadioField.tsx",
+        "RadioGroup.module.css",
+        "RadioGroup.tsx",
+        "RadioGroupContext.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "RangeSlider": {
+      "name": "RangeSlider",
+      "files": [
+        "RangeSlider.module.css",
+        "RangeSlider.tsx",
+        "RangeSlider.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Rating": {
+      "name": "Rating",
+      "files": [
+        "Rating.module.css",
+        "Rating.tsx",
+        "Rating.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "SegmentedControl": {
+      "name": "SegmentedControl",
+      "files": [
+        "SegmentedControl.module.css",
+        "SegmentedControl.tsx",
+        "SegmentedControl.types.ts",
+        "SegmentedControlContext.ts",
+        "SegmentedControlItem.module.css",
+        "SegmentedControlItem.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "SelectDropdown": {
+      "name": "SelectDropdown",
+      "files": [
+        "SelectDropdown.module.css",
+        "SelectDropdown.tsx",
+        "SelectDropdown.types.ts",
+        "SelectDropdownOption.module.css",
+        "SelectDropdownOption.tsx",
+        "SelectDropdownOverlay.module.css",
+        "SelectDropdownOverlay.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Sidebar": {
+      "name": "Sidebar",
+      "files": [
+        "Sidebar.module.css",
+        "Sidebar.tsx",
+        "Sidebar.types.ts",
+        "SidebarContent.module.css",
+        "SidebarContent.tsx",
+        "SidebarContext.ts",
+        "SidebarDivider.module.css",
+        "SidebarDivider.tsx",
+        "SidebarFooter.module.css",
+        "SidebarFooter.tsx",
+        "SidebarGroup.module.css",
+        "SidebarGroup.tsx",
+        "SidebarHeader.module.css",
+        "SidebarHeader.tsx",
+        "SidebarNavItem.module.css",
+        "SidebarNavItem.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Stepper": {
+      "name": "Stepper",
+      "files": [
+        "Stepper.module.css",
+        "Stepper.tsx",
+        "Stepper.types.ts",
+        "StepperContext.ts",
+        "StepperStep.module.css",
+        "StepperStep.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Switch": {
+      "name": "Switch",
+      "files": [
+        "Switch.module.css",
+        "Switch.tsx",
+        "Switch.types.ts",
+        "SwitchField.module.css",
+        "SwitchField.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Tab": {
+      "name": "Tab",
+      "files": [
+        "Tab.module.css",
+        "Tab.tsx",
+        "Tab.types.ts",
+        "TabAdd.module.css",
+        "TabAdd.tsx",
+        "TabContext.ts",
+        "TabItem.module.css",
+        "TabItem.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Table": {
+      "name": "Table",
+      "files": [
+        "Table.module.css",
+        "Table.tsx",
+        "Table.types.ts",
+        "TableBody.tsx",
+        "TableCell.module.css",
+        "TableCell.tsx",
+        "TableContext.ts",
+        "TableFooter.module.css",
+        "TableFooter.tsx",
+        "TableHeader.module.css",
+        "TableHeader.tsx",
+        "TableHeaderCell.module.css",
+        "TableHeaderCell.tsx",
+        "TableRow.module.css",
+        "TableRow.tsx",
+        "TableToolbar.module.css",
+        "TableToolbar.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Tag": {
+      "name": "Tag",
+      "files": [
+        "Tag.module.css",
+        "Tag.tsx",
+        "Tag.types.ts",
+        "TagBrand.module.css",
+        "TagBrand.tsx",
+        "TagStatus.module.css",
+        "TagStatus.tsx",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "Tooltip": {
+      "name": "Tooltip",
+      "files": [
+        "Tooltip.module.css",
+        "Tooltip.tsx",
+        "Tooltip.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "TreeviewList": {
+      "name": "TreeviewList",
+      "files": [
+        "TreeviewItem.module.css",
+        "TreeviewItem.tsx",
+        "TreeviewList.module.css",
+        "TreeviewList.tsx",
+        "TreeviewList.types.ts",
+        "TreeviewListContext.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    },
+    "VerificationCode": {
+      "name": "VerificationCode",
+      "files": [
+        "VerificationCode.module.css",
+        "VerificationCode.tsx",
+        "VerificationCode.types.ts",
+        "index.ts"
+      ],
+      "dependencies": [],
+      "internalDeps": [
+        "utils/cn"
+      ]
+    }
+  }
+}

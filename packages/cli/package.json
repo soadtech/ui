@@ -1,0 +1,27 @@
+{
+  "name": "@soadtech/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "soadtech": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "registry"
+  ],
+  "scripts": {
+    "prebuild": "tsx scripts/copy-source.ts",
+    "build": "tsup"
+  },
+  "dependencies": {
+    "commander": "^14.0.3",
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.9",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

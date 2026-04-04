@@ -1,0 +1,13 @@
+{
+  "name": "soadtech-ui-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter soadtech-ui-preview dev",
+    "build": "pnpm --filter soadtech-ui build",
+    "typecheck": "pnpm --filter soadtech-ui typecheck",
+    "generate-registry": "tsx scripts/generate-registry.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
