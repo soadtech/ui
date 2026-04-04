@@ -140,11 +140,13 @@ export const SelectDropdown = forwardRef<HTMLDivElement, SelectDropdownProps>(
       multiple: _multiple,
       value: _value,
       onChange: _onChange,
+      maxVisibleChips: _maxVisibleChips,
       ...rest
     } = props as SelectDropdownProps & {
       multiple?: boolean;
       value?: unknown;
       onChange?: unknown;
+      maxVisibleChips?: number;
     };
 
     const multiple = props.multiple === true;
