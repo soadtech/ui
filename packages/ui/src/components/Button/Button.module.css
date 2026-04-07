@@ -42,16 +42,16 @@
    ═══════════════════════════════════════ */
 
 .fill.primary {
-  background-color: var(--st-color-neutral-900);
-  color: #ffffff;
+  background-color: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
 }
 
 .fill.primary:hover:not(:disabled) {
-  background-color: var(--st-color-neutral-800);
+  background-color: var(--st-color-primary-hover);
 }
 
 .fill.primary:active:not(:disabled) {
-  background-color: var(--st-color-neutral-950);
+  background-color: var(--st-color-primary-active);
 }
 
 .fill.danger {
@@ -73,16 +73,16 @@
 
 .outline.primary {
   background-color: transparent;
-  border-color: var(--st-color-neutral-300);
-  color: var(--st-color-neutral-900);
+  border-color: var(--st-color-primary);
+  color: var(--st-color-primary);
 }
 
 .outline.primary:hover:not(:disabled) {
-  background-color: var(--st-color-neutral-100);
+  background-color: var(--st-color-primary-subtle);
 }
 
 .outline.primary:active:not(:disabled) {
-  background-color: var(--st-color-neutral-200);
+  background-color: var(--st-color-primary-subtle);
 }
 
 .outline.danger {
@@ -105,15 +105,15 @@
 
 .ghost.primary {
   background-color: transparent;
-  color: var(--st-color-neutral-900);
+  color: var(--st-color-primary);
 }
 
 .ghost.primary:hover:not(:disabled) {
-  background-color: var(--st-color-neutral-100);
+  background-color: var(--st-color-primary-subtle);
 }
 
 .ghost.primary:active:not(:disabled) {
-  background-color: var(--st-color-neutral-200);
+  background-color: var(--st-color-primary-subtle);
 }
 
 .ghost.danger {

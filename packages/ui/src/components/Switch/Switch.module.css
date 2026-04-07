@@ -83,7 +83,7 @@
 
 .iconCheck {
   opacity: 0;
-  color: var(--st-color-success);
+  color: var(--st-color-primary);
 }
 
 .md .iconX svg,
@@ -100,7 +100,7 @@
 
 /* ─── Checked state ─── */
 .root:has(.input:checked) .track {
-  background-color: var(--st-color-success);
+  background-color: var(--st-color-primary);
 }
 
 .root.md:has(.input:checked) .thumb {
@@ -125,12 +125,12 @@
 }
 
 .root:not(.disabled):not(.readOnly):has(.input:checked:hover) .track {
-  background-color: var(--st-color-success-hover);
+  background-color: var(--st-color-primary-hover);
 }
 
 /* ─── Focus ─── */
 .root:has(.input:focus-visible) .track {
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 /* ─── Disabled ─── */

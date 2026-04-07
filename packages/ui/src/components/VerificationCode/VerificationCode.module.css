@@ -23,8 +23,8 @@
 }
 
 .digit:focus {
-  border-color: var(--st-color-success);
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  border-color: var(--st-color-primary);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
   background: var(--st-color-background);
 }
 

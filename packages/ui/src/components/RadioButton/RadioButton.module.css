@@ -52,7 +52,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--st-color-success-foreground);
+  background-color: var(--st-color-primary-foreground);
   opacity: 0;
   transition: opacity var(--st-transition-fast);
 }
@@ -64,8 +64,8 @@
 
 /* ─── Checked state ─── */
 .root:has(.input:checked) .circle {
-  background-color: var(--st-color-success);
-  border-color: var(--st-color-success);
+  background-color: var(--st-color-primary);
+  border-color: var(--st-color-primary);
 }
 
 .root:has(.input:checked) .dot {
@@ -78,13 +78,13 @@
 }
 
 .root:not(.disabled):not(.readOnly):has(.input:checked:hover) .circle {
-  background-color: var(--st-color-success-hover);
-  border-color: var(--st-color-success-hover);
+  background-color: var(--st-color-primary-hover);
+  border-color: var(--st-color-primary-hover);
 }
 
 /* ─── Focus ─── */
 .root:has(.input:focus-visible) .circle {
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 /* ─── Disabled ─── */

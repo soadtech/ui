@@ -55,15 +55,15 @@
 }
 
 .checkboxBox.checked {
-  background-color: var(--st-color-success);
-  border-color: var(--st-color-success);
+  background-color: var(--st-color-primary);
+  border-color: var(--st-color-primary);
 }
 
 .checkboxIcon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--st-color-success-foreground);
+  color: var(--st-color-primary-foreground);
 }
 
 .checkboxIcon svg {
@@ -97,5 +97,5 @@
   align-items: center;
   flex-shrink: 0;
   margin-left: auto;
-  color: var(--st-color-success);
+  color: var(--st-color-primary);
 }

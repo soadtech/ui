@@ -38,8 +38,8 @@
 }
 
 .inputBox.focused:not(.disabled):not(.error):not(.warning):not(.success):not(.ai) {
-  border-color: var(--st-color-success);
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  border-color: var(--st-color-primary);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 .inputBox.error {
@@ -53,8 +53,8 @@
 }
 
 .inputBox.success {
-  border-color: var(--st-color-success);
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  border-color: var(--st-color-primary);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 .inputBox.ai {
@@ -152,7 +152,7 @@
 }
 
 .feedback_success {
-  color: var(--st-color-success);
+  color: var(--st-color-primary);
 }
 
 .feedback_error {

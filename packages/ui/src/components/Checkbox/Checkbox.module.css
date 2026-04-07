@@ -41,7 +41,7 @@
   border: 1.5px solid var(--st-color-neutral-300);
   border-radius: var(--st-radius-sm);
   background-color: var(--st-color-background);
-  color: var(--st-color-success-foreground);
+  color: var(--st-color-primary-foreground);
   transition:
     background-color var(--st-transition-fast),
     border-color var(--st-transition-fast),
@@ -60,8 +60,8 @@
 /* ─── Checked state ─── */
 .root:has(.input:checked) .box,
 .root:has(.input:indeterminate) .box {
-  background-color: var(--st-color-success);
-  border-color: var(--st-color-success);
+  background-color: var(--st-color-primary);
+  border-color: var(--st-color-primary);
 }
 
 .root:has(.input:checked) .icon,
@@ -76,13 +76,13 @@
 
 .root:not(.disabled):not(.readOnly):has(.input:checked:hover) .box,
 .root:not(.disabled):not(.readOnly):has(.input:indeterminate:hover) .box {
-  background-color: var(--st-color-success-hover);
-  border-color: var(--st-color-success-hover);
+  background-color: var(--st-color-primary-hover);
+  border-color: var(--st-color-primary-hover);
 }
 
 /* ─── Focus ─── */
 .root:has(.input:focus-visible) .box {
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 /* ─── Disabled ─── */

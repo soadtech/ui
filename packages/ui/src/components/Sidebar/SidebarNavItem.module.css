@@ -26,7 +26,7 @@
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--st-color-success);
+  outline: 2px solid var(--st-color-primary);
   outline-offset: -2px;
 }
 
@@ -36,12 +36,12 @@
 }
 
 .trigger.active {
-  background-color: var(--st-color-success);
-  color: var(--st-color-success-foreground);
+  background-color: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
 }
 
 .trigger.active:hover:not(:disabled) {
-  background-color: var(--st-color-success);
+  background-color: var(--st-color-primary);
 }
 
 /* ─── Icon slot ─── */
@@ -76,16 +76,16 @@
   height: 20px;
   padding: 0 var(--st-space-2);
   border-radius: var(--st-radius-full);
-  background-color: var(--st-color-success);
-  color: var(--st-color-success-foreground);
+  background-color: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
   font-size: var(--st-font-size-xs);
   font-weight: var(--st-font-weight-semibold);
   line-height: 1;
 }
 
 .trigger.active .badge {
-  background-color: var(--st-color-success-foreground);
-  color: var(--st-color-success);
+  background-color: var(--st-color-primary-foreground);
+  color: var(--st-color-primary);
 }
 
 /* ─── Chevron ─── */
@@ -145,7 +145,7 @@
 }
 
 .iconButton:focus-visible {
-  outline: 2px solid var(--st-color-success);
+  outline: 2px solid var(--st-color-primary);
   outline-offset: -2px;
 }
 
@@ -155,12 +155,12 @@
 }
 
 .iconButton.active {
-  background-color: var(--st-color-success);
-  color: var(--st-color-success-foreground);
+  background-color: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
 }
 
 .iconButton.active:hover:not(:disabled) {
-  background-color: var(--st-color-success);
+  background-color: var(--st-color-primary);
 }
 
 /* ─── Badge dot (collapsed) ─── */
@@ -172,5 +172,5 @@
   width: 8px;
   height: 8px;
   border-radius: var(--st-radius-full);
-  background-color: var(--st-color-success);
+  background-color: var(--st-color-primary);
 }

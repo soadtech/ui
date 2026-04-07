@@ -1,6 +1,6 @@
 {
   "name": "soadtech-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "sideEffects": [
     "**/*.css"
@@ -24,7 +24,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && cp -r src/theme dist/theme",
     "typecheck": "tsc --noEmit -p tsconfig.lib.json"
   },
   "peerDependencies": {

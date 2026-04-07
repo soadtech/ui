@@ -62,8 +62,8 @@
 }
 
 .trigger.success {
-  border-color: var(--st-color-success);
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  border-color: var(--st-color-primary);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 .trigger.ai {
@@ -129,8 +129,8 @@
   gap: var(--st-space-1);
   height: 24px;
   padding: 0 var(--st-space-2);
-  background: var(--st-color-success);
-  color: var(--st-color-success-foreground);
+  background: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
   border-radius: 9999px;
   font-size: var(--st-font-size-xs);
   line-height: 1;
@@ -189,7 +189,7 @@
 }
 
 .feedback_success {
-  color: var(--st-color-success);
+  color: var(--st-color-primary);
 }
 
 .feedback_error {

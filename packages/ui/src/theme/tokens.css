@@ -1,3 +1,4 @@
+@layer soadtech-ui {
 :root {
   /* ─── Colors: Primary ─── */
   --st-color-primary: #2563eb;
@@ -151,4 +152,5 @@
   --st-z-modal: 1300;
   --st-z-toast: 1400;
   --st-z-tooltip: 1500;
+}
 }

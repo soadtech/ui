@@ -37,13 +37,13 @@
 }
 
 .basic.active {
-  border-bottom-color: var(--st-color-success);
+  border-bottom-color: var(--st-color-primary);
   color: var(--st-color-foreground);
   font-weight: var(--st-font-weight-semibold);
 }
 
 .basic:focus-visible {
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 /* ─── Dynamic variant ─── */
@@ -71,7 +71,7 @@
 }
 
 .dynamic:focus-visible {
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
 }
 
 /* ─── Disabled ─── */
@@ -106,8 +106,8 @@
   height: 20px;
   padding: 0 6px;
   border-radius: var(--st-radius-full);
-  background: var(--st-color-success);
-  color: var(--st-color-success-foreground);
+  background: var(--st-color-primary);
+  color: var(--st-color-primary-foreground);
   font-size: var(--st-font-size-xs);
   font-weight: var(--st-font-weight-semibold);
   line-height: 1;
@@ -140,6 +140,6 @@
 }
 
 .close:focus-visible {
-  box-shadow: 0 0 0 2px var(--st-color-success);
+  box-shadow: 0 0 0 2px var(--st-color-primary);
   outline: none;
 }
